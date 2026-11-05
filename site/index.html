@@ -72,7 +72,7 @@
   /* ---------------------------------------------------------------- hero ---- */
 
   .hero {
-    padding-block: clamp(4rem, 12vh, 8rem) clamp(2.5rem, 6vh, 4rem);
+    padding-block: clamp(2.5rem, 7vh, 4.5rem) clamp(1.5rem, 4vh, 2.5rem);
     border-bottom: 1px solid var(--rule);
   }
 
@@ -171,31 +171,7 @@
     align-items: end;
   }
 
-  .hero-rail { border-top: 1px solid var(--rule-strong); }
-  .hero-rail dl { margin: 0; }
-  .hero-rail div {
-    display: flex;
-    justify-content: space-between;
-    gap: 1rem;
-    padding-block: 0.6rem;
-    border-bottom: 1px solid var(--rule);
-  }
-  .hero-rail dt {
-    font-family: var(--mono);
-    font-size: 0.6875rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--faint);
-  }
-  .hero-rail dd {
-    margin: 0;
-    font-size: 0.8125rem;
-    color: #ded6c9;
-    text-align: right;
-    font-variant-numeric: tabular-nums;
-  }
-
-  section { padding-block: clamp(3rem, 8vh, 5.5rem); border-bottom: 1px solid var(--rule); }
+  section { padding-block: clamp(2rem, 4.5vh, 3.25rem); border-bottom: 1px solid var(--rule); }
 
   h2 {
     font-family: var(--display);
@@ -207,7 +183,7 @@
     text-wrap: balance;
   }
 
-  .lede { max-width: var(--measure); color: #d9d0c2; margin: 0 0 2.5rem; }
+  .lede { max-width: 100%; color: #d9d0c2; margin: 0 0 1.5rem; }
 
   .ledger {
     display: grid;
@@ -372,25 +348,9 @@
   .run-story p { margin: 0 0 0.8rem; }
   .run-story p:last-child { margin-bottom: 0; }
 
-  .class-strip {
-    display: grid;
-    grid-template-columns: repeat(7, minmax(0, 1fr));
-    gap: 0.6rem;
-    margin-top: 2.25rem;
-    max-width: 34rem;
-  }
-  .class-strip img {
-    width: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-    border: 1px solid var(--rule-strong);
-    border-radius: 6px;
-    background: var(--surface);
-  }
-
   .class-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
     gap: 1rem;
     margin-top: 1.25rem;
   }
@@ -450,7 +410,7 @@
 
   .item-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
     gap: 1rem;
     margin-top: 1.25rem;
   }
@@ -492,6 +452,53 @@
   .boss-card h3 { margin: 0; font-size: 1rem; color: var(--bone); font-weight: 600; }
   .boss-card span { display: block; margin-top: 0.15rem; font-family: var(--mono); font-size: 0.65rem; letter-spacing: 0.09em; text-transform: uppercase; color: var(--faint); }
 
+  .hero-side {
+    align-self: start;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.7rem;
+  }
+  .hero-side .btn { width: 100%; justify-content: center; }
+
+  .draft-line {
+    max-width: 100%;
+    margin: 1.25rem 0 0;
+    color: #d3cabc;
+    font-size: 0.92rem;
+  }
+  .draft-line strong { color: var(--bone); }
+
+  .run-table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.25rem;
+  }
+  .run-table th, .run-table td {
+    text-align: left;
+    padding: 0.72rem 0.8rem;
+    border-bottom: 1px solid var(--rule);
+    vertical-align: top;
+  }
+  .run-table th {
+    font-family: var(--mono);
+    font-size: 0.7rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--faint);
+  }
+  .run-table td:first-child {
+    color: var(--bone);
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  .run-table td:nth-child(2) {
+    font-family: var(--mono);
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
   /* ---------------------------------------------------------- requirements -- */
 
   .facts {
@@ -516,14 +523,14 @@
   .fact dd code { font-family: var(--mono); font-size: 0.875rem; color: var(--bone); }
 
   .note {
-    margin-top: 2rem;
+    margin-top: 1.25rem;
     padding: 1.25rem 1.4rem;
     background: var(--surface-2);
     border: 1px solid var(--rule-strong);
     border-radius: 10px;
     color: #d8cfc1;
     font-size: 0.9375rem;
-    max-width: 72ch;
+    max-width: 100%;
   }
   .note strong { color: var(--bone); font-weight: 600; }
 
@@ -543,7 +550,6 @@
 
   @media (max-width: 1040px) {
     .hero-grid { grid-template-columns: 1fr; gap: 2.75rem; align-items: start; }
-    .hero-rail { max-width: 26rem; }
   }
 
   @media (max-width: 560px) {
@@ -554,10 +560,19 @@
 
   @media (max-width: 780px) {
     .hero-grid { grid-template-columns: 1fr; gap: 2.5rem; align-items: start; }
-    .hero-rail { max-width: 22rem; }
     .ledger { grid-template-columns: 1fr; gap: 2.25rem; }
     .status-grid { grid-template-columns: 1fr; }
     .steps > li { grid-template-columns: 1.75rem minmax(0, 1fr); gap: 0.9rem; }
+  }
+
+  @media (min-width: 900px) {
+    .class-grid, .item-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+    .class-card:last-child { grid-column: span 2; }
+  }
+
+  @media (max-width: 899px) {
+    .class-grid, .item-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .class-card:last-child { grid-column: span 2; }
   }
 </style>
 </head>
@@ -585,15 +600,6 @@
         boss window, then an endless finale.
       </p>
 
-      <div class="actions">
-        <a class="btn btn-primary" data-release href="#install" rel="noopener">
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M8 1.5v8.2M4.9 6.9 8 10l3.1-3.1M2.2 11.6v2.1h11.6v-2.1" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"/>
-          </svg>
-          Download the current build
-        </a>
-        <a class="btn btn-quiet" href="#install">How to install</a>
-      </div>
 
       <p class="hero-note">
         Windows only, Megabonk on Steam. The installer backs up the loader files
@@ -601,108 +607,31 @@
         art.
       </p>
 
-      <div class="class-strip" aria-label="Seven Path of Exile classes">
-        <img src="assets/classes/Marauder.png" alt="Marauder" loading="lazy">
-        <img src="assets/classes/Ranger.png" alt="Ranger" loading="lazy">
-        <img src="assets/classes/Witch.png" alt="Witch" loading="lazy">
-        <img src="assets/classes/Duelist.png" alt="Duelist" loading="lazy">
-        <img src="assets/classes/Templar.png" alt="Templar" loading="lazy">
-        <img src="assets/classes/Shadow.png" alt="Shadow" loading="lazy">
-        <img src="assets/classes/Scion.png" alt="Scion" loading="lazy">
-      </div>
+      
     </div>
 
-    <aside class="hero-rail" aria-label="Current state">
-      <dl>
-        <div><dt>Build</dt><dd>0.9.213 &middot; private</dd></div>
-        <div><dt>Run</dt><dd>3 floors &middot; 10 / 9 / 8 min</dd></div>
-        <div><dt>Boss window</dt><dd>60 s &middot; or die</dd></div>
-        <div><dt>Classes</dt><dd>7</dd></div>
-        <div><dt>Skills</dt><dd>7 &middot; 10 upgrades</dd></div>
-        <div><dt>Relics</dt><dd>79</dd></div>
-        <div><dt>Tomes</dt><dd>26 + 4</dd></div>
-        <div><dt>Game</dt><dd>2023.2.22f1</dd></div>
-      </dl>
-    </aside>
+          <div class="actions hero-side">
+        <a class="btn btn-primary" data-release href="https://github.com/Exode718/Path-of-Bonkers/releases/download/v0.9.213/WraeclastConversion-v0.9.213.zip" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M8 1.5v8.2M4.9 6.9 8 10l3.1-3.1M2.2 11.6v2.1h11.6v-2.1" stroke="currentColor" stroke-width="1.3" stroke-linecap="square"/>
+          </svg>
+          Download the current build
+        </a>
+        <a class="btn btn-quiet" href="#install">How to install</a>
+      </div>
   </div>
 </header>
 
-<section class="wrap" id="glance">
-  <dl class="facts">
-    <div class="fact"><dt>Classes</dt><dd>7 &middot; 7 signature skills</dd></div>
-    <div class="fact"><dt>Upgrades</dt><dd>10 per skill &middot; 40 picks max</dd></div>
-    <div class="fact"><dt>Items</dt><dd>79 relics &middot; 26 + 4 tomes</dd></div>
-    <div class="fact"><dt>Run</dt><dd>10 / 9 / 8 min + 60 s boss</dd></div>
-    <div class="fact"><dt>Endgame</dt><dd>endless after the final boss</dd></div>
-  </dl>
-</section>
+
 
 <main>
 
-  <section class="wrap" id="scope">
-    <h2>What changes, and what does not</h2>
+  <section class="wrap" id="classes">
+    <h2>Classes and the upgrade draft</h2>
     <p class="lede">
-      Megabonk is a compiled Unity build, so this is a total conversion rather
-      than a reskin: the world is reused as-is, the player layer is ours.
+      Each class has one signature skill and ten upgrades for it. The level-up screen offers three of those ten cards; you pick one.
     </p>
-
-    <div class="ledger kept">
-      <div>
-        <h3>Kept from Megabonk</h3>
-        <ul>
-          <li>Terrain generation and collisions <span class="tag">as-is</span></li>
-          <li>Lighting, fog, sky, stage moods <span class="tag">as-is</span></li>
-          <li>Player collision, camera, jumping <span class="tag">as-is</span></li>
-          <li>Enemy waves, elites, boss slots, AI <span class="tag">as-is</span></li>
-          <li>HUD, windows, chests, shrines <span class="tag">rebound</span></li>
-          <li>Audio for impacts and UI <span class="tag">host mixer</span></li>
-        </ul>
-      </div>
-      <div>
-        <h3>Replaced by ours</h3>
-        <ul>
-          <li>7 classes with PoE stats <span class="tag">new</span></li>
-          <li>7 skills, 10 upgrades each <span class="tag">new</span></li>
-          <li>Starter weapons and poses <span class="tag">ours</span></li>
-          <li>79 relics, 26 tomes, 4 code-side <span class="tag">ours</span></li>
-          <li>Level-up drafts and rewards <span class="tag">ours</span></li>
-          <li>PoE art: cards, items, world, bosses <span class="tag">PoE</span></li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <section class="wrap" id="release">
-    <h2>What the 0.9.213 build does</h2>
-    <p class="lede">
-      A playable private build. The rules below are the ones the plugin uses at
-      runtime; the examples are real cards from the current sheets.
-    </p>
-
-    <h3 class="block-title">Run structure</h3>
-    <div class="run-story">
-      <p>
-        No more ghost farming for an hour between each floor. On the first floor
-        you have 10 minutes before the boss is summoned, followed by a one-minute
-        ghost wave. If you kill the boss before that minute ends, you are
-        teleported to the next floor; otherwise you die.
-      </p>
-      <p>
-        You can also summon the boss early and leave before the timers run out,
-        though there is no bonus for doing so. The second floor is 9 minutes plus
-        1 minute. The third is 8 minutes plus 1 minute; there is no boss there,
-        so the portal opens automatically. After the final boss, an endless wave
-        begins.
-      </p>
-    </div>
-
-    <h3 class="block-title">Classes and the upgrade draft</h3>
-    <p class="lede">
-      Each class has one signature skill and ten upgrades for it. The level-up
-      screen offers three of those ten cards; the choice is forced and the three
-      cards are the whole draft.
-    </p>
-    <div class="class-grid">
+<div class="class-grid">
         <article class="class-card">
           <img class="portrait" src="assets/classes/Marauder.png" alt="Marauder" loading="lazy">
           <div>
@@ -760,19 +689,13 @@
           <p>+1% Lightning Damage per level; Arc gains +1 chain every 10 levels (max +3).</p>
         </article>
     </div>
-    <ul class="rules">
-      <li>Upgrade draft at levels <strong>1, 5, 10, 15, 20&hellip;</strong></li>
-      <li>Three of your class's ten skill upgrades are offered; pick one.</li>
-      <li>Refresh, skip and banish are disabled on a skill draft.</li>
-      <li>40 picks max; each pick gives <strong>+6% damage</strong> and <strong>&minus;0.6% cooldown</strong>.</li>
-    </ul>
+    <p class="draft-line"><strong>Upgrade draft:</strong> levels 1, 5, 10, 15, 20&hellip; &middot; three of your class's ten upgrades are offered, pick one &middot; refresh, skip and banish are disabled &middot; 40 picks max, each pick +6% damage and &minus;0.6% cooldown.</p>
+  </section>
 
-    <h3 class="block-title">The ten upgrades of each skill</h3>
-    <p class="lede">
-      Every upgrade can stack; the card states its cost. Pick the ones that fit
-      the variant you want to play.
-    </p>
-    <div class="upgrades">
+  <section class="wrap" id="upgrades">
+    <h2>The ten upgrades of each skill</h2>
+    <p class="lede">Every upgrade can stack; the card states its cost.</p>
+<div class="upgrades">
       <details>
         <summary><img src="assets/skills/righteous-fire.png" alt="" loading="lazy"> Marauder &mdash; Righteous Fire <span class="count">10 upgrades</span></summary>
         <ul class="upgrade-list">
@@ -879,14 +802,32 @@
         </ul>
       </details>
     </div>
+  </section>
 
-    <h3 class="block-title">Relics and items</h3>
+  <section class="wrap" id="run">
+    <h2>Run structure</h2>
     <p class="lede">
-      79 relics and 30 tomes. Effects are engine-owned: no maluses, card text is
-      generated from the stats, and a relic that cannot help the current class is
-      never offered. Values are rounded to 2.5% / 5% steps.
+      Three floors, then an endless finale. You can summon the boss early and leave before the timer ends, but there is no bonus for it.
     </p>
-    <div class="item-grid">
+    <table class="run-table">
+      <thead>
+        <tr><th>Floor</th><th>Timer</th><th>Then</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>10:00</td><td>Boss + a one-minute ghost wave. Kill the boss inside that minute to reach floor 2; otherwise you die.</td></tr>
+        <tr><td>2</td><td>9:00</td><td>Same boss + one-minute rule.</td></tr>
+        <tr><td>3</td><td>8:00</td><td>No boss; the portal opens automatically.</td></tr>
+        <tr><td>Final</td><td>&mdash;</td><td>Kill the final boss; the endless wave begins.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="wrap" id="items">
+    <h2>Relics and items</h2>
+    <p class="lede">
+      79 relics and 30 tomes: no maluses, live card text, class-filtered draws, rounded values.
+    </p>
+<div class="item-grid">
         <article class="item-card">
           <img src="assets/items/lochtonial-caress.png" alt="" loading="lazy">
           <div><h3>Lochtonial Caress</h3><span class="rarity rarity-common">common</span></div>
@@ -928,49 +869,12 @@
           <p>+40% Fire Damage, +40% Ice Damage and +40% Lightning Damage.</p>
         </article>
     </div>
-    <div class="note">
+<div class="note">
       <strong>Tomes and drops.</strong> 26 PoE tomes plus four code-side tomes
       (Balance, Chaos, Gambler, Hoarder). The level-up draft is flat; chests,
       the merchant and the boss reward still read tier, rarity and Luck. Perandus
       Blazon is a single stack (chests cost 40% less) and Tome of Hoarding grants
       a random item directly.
-    </div>
-
-    <h3 class="block-title">Bosses</h3>
-    <p class="lede">
-      Searing Exarch on floor 1, Eater of Worlds on floor 2, the Maven in the
-      final arena. Elder and Shaper rotate as minibosses. Nine creature families
-      cover the host's spawn slots.
-    </p>
-    <div class="boss-grid">
-        <article class="boss-card">
-          <img src="assets/bosses/searing-exarch.png" alt="Searing Exarch" loading="lazy">
-          <div><h3>Searing Exarch</h3><span>Floor 1</span></div>
-        </article>
-        <article class="boss-card">
-          <img src="assets/bosses/eater-of-worlds.png" alt="Eater of Worlds" loading="lazy">
-          <div><h3>Eater of Worlds</h3><span>Floor 2</span></div>
-        </article>
-        <article class="boss-card">
-          <img src="assets/bosses/maven.png" alt="The Maven" loading="lazy">
-          <div><h3>The Maven</h3><span>Final arena</span></div>
-        </article>
-    </div>
-
-    <div class="note">
-      <strong>0.9.213 &mdash; the player-power pass.</strong> Class passives now
-      grow every level: Marauder Fire + Life, Witch Fire, Templar Cold + Area,
-      Ranger Cold + Move, Duelist Attack Speed, Shadow Chaos, Scion Lightning
-      plus one Arc chain every 10 levels. Fireball splashes for half damage in
-      2.2 m; Viper Strike spreads a weaker poison to two neighbours; the starter
-      weapon's own bonuses and traits now apply. Cyclone is down to 9 damage /
-      0.30 s / 115 radius while the weak skills were raised. Relic values are
-      rounded, projectile speed is capped at 30%.
-    </div>
-    <div class="note">
-      <strong>Swarm budget.</strong> 250 live enemies max (bosses always spawn).
-      Beyond the closest 64 bodies, clips run at 2 Hz and shadows turn off; the
-      PoE mesh and texture stay on every enemy.
     </div>
   </section>
 
@@ -1073,7 +977,7 @@
 <footer class="wrap">
   <span>Wraeclast Conversion &mdash; build 0.9.213, private build.</span>
   <nav>
-    <a data-repo href="#scope" rel="noopener">Repository</a>
+    <a data-repo href="#classes" rel="noopener">Repository</a>
     <a data-releases href="#install" rel="noopener">Releases</a>
     <a href="#install">Install</a>
   </nav>
@@ -1098,10 +1002,9 @@
     if (!owner || !repo) { return; }
     var base = 'https://github.com/' + owner + '/' + repo;
 
-    // The archive is attached to the v0.9.213 GitHub release (over
-    // git's 100 MB file limit); /releases/latest keeps the link stable.
+    // Direct asset URL for the v0.9.213 release (over git's 100 MB limit).
     document.querySelectorAll('[data-release]').forEach(function (el) {
-      el.href = base + '/releases/latest/download/WraeclastConversion-v0.9.213.zip';
+      el.href = base + '/releases/download/v0.9.213/WraeclastConversion-v0.9.213.zip';
     });
     document.querySelectorAll('[data-releases]').forEach(function (el) {
       el.href = base + '/releases';
