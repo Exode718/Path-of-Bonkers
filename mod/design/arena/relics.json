@@ -1,0 +1,476 @@
+[
+  {
+    "id": "goldwyrm",
+    "name": "Goldwyrm",
+    "text": "+20% Gold and +10% Fire Damage.",
+    "rarity": "common"
+  },
+  {
+    "id": "heatshiver",
+    "name": "Heatshiver",
+    "text": "+12% Ice Damage and +12% Fire Damage.",
+    "rarity": "rare"
+  },
+  {
+    "id": "the-brass-dome",
+    "name": "The Brass Dome",
+    "text": "+25 Armour and +4 Thorns.",
+    "rarity": "epic"
+  },
+  {
+    "id": "hateforge",
+    "name": "Hateforge",
+    "text": "+25% Damage, 15% faster cooldowns.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "briskwrap",
+    "name": "Briskwrap",
+    "text": "+8% Movement Speed and +10% Evasion.",
+    "rarity": "common"
+  },
+  {
+    "id": "cloak-of-defiance",
+    "name": "Cloak of Defiance",
+    "text": "+15% Evasion and +10% maximum Life.",
+    "rarity": "rare"
+  },
+  {
+    "id": "meginords-girdle",
+    "name": "Meginord's Girdle",
+    "text": "+15% maximum Life and +10% Damage.",
+    "rarity": "common"
+  },
+  {
+    "id": "lochtonial-caress",
+    "name": "Lochtonial Caress",
+    "text": "10% faster cooldowns and +5% Movement Speed.",
+    "rarity": "common"
+  },
+  {
+    "id": "daressos-defiance",
+    "name": "Daresso's Defiance",
+    "text": "+10% Damage and +8 Armour.",
+    "rarity": "rare"
+  },
+  {
+    "id": "blood-thorn",
+    "name": "Blood Thorn",
+    "text": "+3 Thorns and +12 maximum Life.",
+    "rarity": "common"
+  },
+  {
+    "id": "the-blood-reaper",
+    "name": "The Blood Reaper",
+    "text": "+18% Damage, -10% maximum Life.",
+    "rarity": "rare"
+  },
+  {
+    "id": "the-squire",
+    "name": "The Squire",
+    "text": "+1 Projectile Count and +10% Damage.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "blackheart",
+    "name": "Blackheart",
+    "text": "25% chance to poison enemies on hit for 3 seconds.",
+    "rarity": "common"
+  },
+  {
+    "id": "lioneyes-glare",
+    "name": "Lioneye's Glare",
+    "text": "+20% Projectile Speed and +5% Critical Strike Chance.",
+    "rarity": "rare"
+  },
+  {
+    "id": "bottled-faith",
+    "name": "Bottled Faith",
+    "text": "+10% Critical Strike Chance and +15% Damage.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "eternity-shroud",
+    "name": "Eternity Shroud",
+    "text": "+40% maximum Life, 10% slower movement.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "omniscience",
+    "name": "Omniscience",
+    "text": "+15% Fire, Ice and Lightning Damage.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "the-halcyon",
+    "name": "The Halcyon",
+    "text": "+25% Ice Damage and 25% chance to freeze.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "cherrubims-maleficence",
+    "name": "Cherrubim's Maleficence",
+    "text": "+3% Lifesteal and +12% Damage.",
+    "rarity": "rare"
+  },
+  {
+    "id": "rumis-concoction",
+    "name": "Rumi's Concoction",
+    "text": "+15 Armour and +15% Evasion.",
+    "rarity": "epic"
+  },
+  {
+    "id": "oriaths-end",
+    "name": "Oriath's End",
+    "text": "Slain enemies explode for 50% of the killing hit.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "sadimas-touch",
+    "name": "Sadima's Touch",
+    "text": "+15% Gold and 6% faster cooldowns.",
+    "rarity": "common"
+  },
+  {
+    "id": "rathpith-globe",
+    "name": "Rathpith Globe",
+    "text": "+40 Shield and +10 Armour.",
+    "rarity": "rare"
+  },
+  {
+    "id": "progenesis",
+    "name": "Progenesis",
+    "text": "+25% maximum Life and +6 Thorns.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "ashes-of-the-stars",
+    "name": "Ashes of the Stars",
+    "text": "20% faster cooldowns and +20% Damage.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "void-battery",
+    "name": "Void Battery",
+    "text": "+12% Critical Strike Chance and +15% Damage.",
+    "rarity": "epic"
+  },
+  {
+    "id": "wondertrap",
+    "name": "Wondertrap",
+    "text": "+5% Movement Speed and +10% Luck.",
+    "rarity": "common"
+  },
+  {
+    "id": "skyforth",
+    "name": "Skyforth",
+    "text": "15% faster cooldowns and +6% Critical Strike Chance.",
+    "rarity": "epic"
+  },
+  {
+    "id": "doryanis-catalyst",
+    "name": "Doryani's Catalyst",
+    "text": "+12% Damage, 8% faster cooldowns.",
+    "rarity": "rare"
+  },
+  {
+    "id": "carcass-jack",
+    "name": "Carcass Jack",
+    "text": "+12% Area of Effect and +10% maximum Life.",
+    "rarity": "rare"
+  },
+  {
+    "id": "perandus-blazon",
+    "name": "Perandus Blazon",
+    "text": "+12% Luck, chests cost 15% less.",
+    "rarity": "common"
+  },
+  {
+    "id": "the-covenant",
+    "name": "The Covenant",
+    "text": "+15% maximum Life and +30 Health Regeneration per minute.",
+    "rarity": "rare"
+  },
+  {
+    "id": "replica-dreamfeather",
+    "name": "Replica Dreamfeather",
+    "text": "+15% Movement Speed, 8% faster cooldowns.",
+    "rarity": "epic"
+  },
+  {
+    "id": "araku-tiki",
+    "name": "Araku Tiki",
+    "text": "+25 Health Regeneration per minute and +8 maximum Life.",
+    "rarity": "common"
+  },
+  {
+    "id": "the-taming",
+    "name": "The Taming",
+    "text": "+10% Fire, Ice and Lightning Damage.",
+    "rarity": "epic"
+  },
+  {
+    "id": "kaoms-sign",
+    "name": "Kaom's Sign",
+    "text": "+15 maximum Life and +5 Armour.",
+    "rarity": "common"
+  },
+  {
+    "id": "asenaths-mark",
+    "name": "Asenath's Mark",
+    "text": "8% faster cooldowns and +8% Evasion.",
+    "rarity": "common"
+  },
+  {
+    "id": "watchers-eye",
+    "name": "Watcher's Eye",
+    "text": "+30% Damage, -10% maximum Life.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "lightning-coil",
+    "name": "Lightning Coil",
+    "text": "+20% Lightning Damage and +10 Armour.",
+    "rarity": "rare"
+  },
+  {
+    "id": "replica-headhunter",
+    "name": "Replica Headhunter",
+    "text": "Slain enemies explode for 80% of the killing hit.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "mark-of-the-shaper",
+    "name": "Mark of the Shaper",
+    "text": "+20% Damage, -10% maximum Life.",
+    "rarity": "epic"
+  },
+  {
+    "id": "nimis",
+    "name": "Nimis",
+    "text": "Projectiles pierce 2 enemies and +25% Projectile Speed.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "voyage",
+    "name": "Voyage",
+    "text": "+25% Movement Speed and +15% Evasion.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "the-pandemonius",
+    "name": "The Pandemonius",
+    "text": "+20% Ice Damage and 20% chance to freeze.",
+    "rarity": "epic"
+  },
+  {
+    "id": "circle-of-anguish",
+    "name": "Circle of Anguish",
+    "text": "+20% Damage and +15% Luck.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "carnage-heart",
+    "name": "Carnage Heart",
+    "text": "+15% Damage, -12% maximum Life.",
+    "rarity": "rare"
+  },
+  {
+    "id": "tasalios-sign",
+    "name": "Tasalio's Sign",
+    "text": "+10% Movement Speed and +10% Evasion.",
+    "rarity": "rare"
+  },
+  {
+    "id": "thousand-ribbons",
+    "name": "Thousand Ribbons",
+    "text": "+6% Fire, Ice and Lightning Damage.",
+    "rarity": "common"
+  },
+  {
+    "id": "ashrend",
+    "name": "Ashrend",
+    "text": "+10% Fire Damage and +5 Armour.",
+    "rarity": "common"
+  },
+  {
+    "id": "precursors-emblem",
+    "name": "Precursor's Emblem",
+    "text": "12% faster cooldowns and +12% Evasion.",
+    "rarity": "epic"
+  },
+  {
+    "id": "pyre",
+    "name": "Pyre",
+    "text": "+15% Fire Damage and 20% chance to burn.",
+    "rarity": "rare"
+  },
+  {
+    "id": "ungils-harmony",
+    "name": "Ungil's Harmony",
+    "text": "+8% Critical Strike Chance and +20% Critical Damage.",
+    "rarity": "rare"
+  },
+  {
+    "id": "karui-ward",
+    "name": "Karui Ward",
+    "text": "+15% Projectile Speed and +5% Movement Speed.",
+    "rarity": "common"
+  },
+  {
+    "id": "doedres-damning",
+    "name": "Doedre's Damning",
+    "text": "+3% Lifesteal and +10% Damage.",
+    "rarity": "rare"
+  },
+  {
+    "id": "prismweave",
+    "name": "Prismweave",
+    "text": "+8% Fire, Ice and Lightning Damage.",
+    "rarity": "common"
+  },
+  {
+    "id": "bramblejack",
+    "name": "Bramblejack",
+    "text": "+4 Thorns and +6 Armour.",
+    "rarity": "common"
+  },
+  {
+    "id": "hrimsorrow",
+    "name": "Hrimsorrow",
+    "text": "+15% Ice Damage and 10% chance to freeze.",
+    "rarity": "common"
+  },
+  {
+    "id": "perandus-signet",
+    "name": "Perandus Signet",
+    "text": "+10% Experience gained.",
+    "rarity": "common"
+  },
+  {
+    "id": "the-three-dragons",
+    "name": "The Three Dragons",
+    "text": "+10% Fire, Ice and Lightning Damage.",
+    "rarity": "rare"
+  },
+  {
+    "id": "maw-of-conquest",
+    "name": "Maw of Conquest",
+    "text": "+25% Poison Damage and 30% chance to poison enemies on hit for 4 seconds.",
+    "rarity": "rare"
+  },
+  {
+    "id": "cowards-legacy",
+    "name": "Coward's Legacy",
+    "text": "10% chance on hit to curse nearby enemies for 50% of the hit.",
+    "rarity": "epic"
+  },
+  {
+    "id": "yoke-of-suffering",
+    "name": "Yoke of Suffering",
+    "text": "+18% Damage, 5% slower movement.",
+    "rarity": "epic"
+  },
+  {
+    "id": "aurseize",
+    "name": "Aurseize",
+    "text": "+10% Gold and +8% Luck.",
+    "rarity": "common"
+  },
+  {
+    "id": "original-sin",
+    "name": "Original Sin",
+    "text": "50% chance to poison enemies on hit for 5 seconds.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "storm-secret",
+    "name": "Storm Secret",
+    "text": "+15% Lightning Damage, 10% faster cooldowns.",
+    "rarity": "epic"
+  },
+  {
+    "id": "mokous-embrace",
+    "name": "Mokou's Embrace",
+    "text": "25% chance to burn on hit, +12% Fire Damage.",
+    "rarity": "rare"
+  },
+  {
+    "id": "apocalypse",
+    "name": "Apocalypse",
+    "text": "+20% Fire Damage and 25% chance to burn.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "wanderlust",
+    "name": "Wanderlust",
+    "text": "XP shards are dragged in from much farther away, so level-ups stay consistent and you backtrack less.",
+    "rarity": "rare"
+  },
+  {
+    "id": "goldrim",
+    "name": "Goldrim",
+    "text": "+10% Difficulty and -20% maximum Life. 8% chance on hit to curse nearby enemies for 45% of the hit.",
+    "rarity": "epic"
+  },
+  {
+    "id": "voidfletcher",
+    "name": "Voidfletcher",
+    "text": "+1 Projectile Count.",
+    "rarity": "epic"
+  },
+  {
+    "id": "dying-sun",
+    "name": "Dying Sun",
+    "text": "While standing still, your damage ramps up and caps at +100%. Best for grounded, hold-position play.",
+    "rarity": "epic"
+  },
+  {
+    "id": "the-embalmer",
+    "name": "The Embalmer",
+    "text": "40% chance to poison enemies on hit for 4 seconds.",
+    "rarity": "epic"
+  },
+  {
+    "id": "headhunter",
+    "name": "Headhunter",
+    "text": "Slain enemies explode for 70% of the killing hit.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "tabula-rasa",
+    "name": "Tabula Rasa",
+    "text": "+1 Projectile Count. -10% maximum Life.",
+    "rarity": "common"
+  },
+  {
+    "id": "mageblood",
+    "name": "Mageblood",
+    "text": "15% faster cooldowns and +12% Area of Effect.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "kaoms-heart",
+    "name": "Kaom's Heart",
+    "text": "+35% maximum Life but 6% slower movement.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "starforge",
+    "name": "Starforge",
+    "text": "+20% Damage and +6% Critical Strike Chance.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "atziris-disfavour",
+    "name": "Atziri's Disfavour",
+    "text": "+25% Damage, projectiles pierce 1 enemy. A brutal, narrow upgrade.",
+    "rarity": "legendary"
+  },
+  {
+    "id": "belly-of-the-beast",
+    "name": "Belly of the Beast",
+    "text": "+22% maximum Life and +12 Armour.",
+    "rarity": "epic"
+  }
+]

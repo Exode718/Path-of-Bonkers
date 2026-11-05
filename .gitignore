@@ -1,0 +1,32 @@
+# Client assets and local builds (never commit)
+mod/art/raw/
+mod/Wraeclast/assets/
+mod/Wraeclast/bin/
+mod/Wraeclast/obj/
+mod/payload/
+mod/tools/poe-gltf/node_modules/
+
+# Portable tooling, extracted tables and the attic
+lab/
+
+# Local release folders and Python caches
+release/
+__pycache__/
+*.pyc
+
+# Local env and OS files
+.env
+.env.*
+!.env.example
+*.log
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+oo2core_9_win64.dll
+
+# Local assistant config and shortcuts
+.commandcode/
+*.lnk

@@ -1,0 +1,342 @@
+[
+  {
+    "id": "Marauder",
+    "name": "Marauder",
+    "title": "The Brute",
+    "portrait": "character/Marauder",
+    "skillId": "righteous-fire",
+    "life": 140,
+    "armour": 18,
+    "moveSpeed": 104,
+    "damagePct": 4,
+    "critChance": 5,
+    "pickupRadius": 88,
+    "regen": 1.2,
+    "archetype": "slow_aoe_tank",
+    "strengths": "Righteous Fire aura, huge regen and armour",
+    "weaknesses": "Short aura range, slow movement",
+    "passive": {
+      "name": "Unyielding",
+      "text": "+1% Fire Damage and +0.5% maximum Life per level.",
+      "perLevel": [
+        {"stat": "FireDamage", "type": "Addition", "value": 0.01},
+        {"stat": "MaxHealth", "type": "Multiplication", "value": 1.005}
+      ]
+    },
+    "starterWeapon": {
+      "id": "nebulis",
+      "name": "Nebulis",
+      "baseType": "Void Sceptre",
+      "family": "scepter",
+      "slot": "one_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/nebulis.glb",
+      "tags": ["sceptre", "one_hand", "fire", "elemental"],
+      "bonus": {"damagePct": 15, "regen": 1.2, "areaPct": 10},
+      "traits": {"ignitePct": 0.15, "igniteSeconds": 3},
+      "scale": 100.0,
+      "rotation": [-90.0, 0.0, 0.0],
+      "roll": 90.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "offhand": {
+      "id": "aegis-aurora",
+      "name": "Aegis Aurora",
+      "baseType": "Champion Kite Shield",
+      "family": "shield",
+      "slot": "off_hand",
+      "grip": "L_Weapon",
+      "model": "res://assets/weapons/aegis-aurora.glb",
+      "bonus": {"maxLifePct": 8, "armour": 12},
+      "scale": 100.0,
+      "rotation": [-10.0, 0.0, 0.0],
+      "roll": 45.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "flavour": "Slow, immovable, and burns everything that comes close."
+  },
+  {
+    "id": "Ranger",
+    "name": "Ranger",
+    "title": "The Huntress",
+    "portrait": "character/Ranger",
+    "skillId": "ice-shot",
+    "life": 94,
+    "armour": 4,
+    "moveSpeed": 132,
+    "damagePct": 6,
+    "critChance": 8,
+    "pickupRadius": 100,
+    "archetype": "chain_clear",
+    "strengths": "Chain arrows, speed and clear",
+    "weaknesses": "Low life, weak single-target",
+    "passive": {
+      "name": "Windrunner",
+      "text": "+1% Cold Damage and +0.5% Movement Speed per level.",
+      "perLevel": [
+        {"stat": "IceDamage", "type": "Addition", "value": 0.01},
+        {"stat": "MoveSpeedMultiplier", "type": "Addition", "value": 0.005}
+      ]
+    },
+    "starterWeapon": {
+      "id": "windripper",
+      "name": "Windripper",
+      "baseType": "Imperial Bow",
+      "family": "bow",
+      "slot": "two_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/windripper.glb",
+      "tags": ["bow", "two_hand", "chain", "projectile"],
+      "bonus": {"moveSpeedPct": 8, "projectileSpeedPct": 20, "critChance": 2},
+      "traits": {"chainChance": 30, "chainJumps": 2},
+      "scale": 80.0,
+      "rotation": [10.0, 15.0, 0.0],
+      "roll": 90.0,
+      "offset": [0.0, -0.05, -0.01],
+      "poses": {
+        "idle": {"rotation": [-90.0, 15.0, 0.0], "roll": 90.0}
+      }
+    },
+    "flavour": "Fast legs, long reach, and a fan of arrows."
+  },
+  {
+    "id": "Witch",
+    "name": "Witch",
+    "title": "The Occultist",
+    "portrait": "character/Witch",
+    "skillId": "fireball",
+    "life": 82,
+    "armour": 2,
+    "moveSpeed": 118,
+    "damagePct": 16,
+    "critChance": 6,
+    "pickupRadius": 94,
+    "archetype": "elemental_boss",
+    "strengths": "Strong elemental boss damage",
+    "weaknesses": "Low life, average clear",
+    "passive": {
+      "name": "Occult Mastery",
+      "text": "+1% Fire Damage per level.",
+      "perLevel": [
+        {"stat": "FireDamage", "type": "Addition", "value": 0.01}
+      ]
+    },
+    "starterWeapon": {
+      "id": "void-battery",
+      "name": "Void Battery",
+      "baseType": "Prophecy Wand",
+      "family": "wand",
+      "slot": "one_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/void-battery.glb",
+      "tags": ["wand", "one_hand", "elemental", "spell"],
+      "bonus": {"damagePct": 18, "areaPct": 5},
+      "scale": 100.0,
+      "rotation": [-90.0, 0.0, 45.0],
+      "roll": -45.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "offhand": {
+      "id": "void-battery",
+      "name": "Void Battery",
+      "baseType": "Prophecy Wand",
+      "family": "wand",
+      "slot": "off_hand",
+      "grip": "L_Weapon",
+      "model": "res://assets/weapons/void-battery.glb",
+      "bonus": {},
+      "scale": 100.0,
+      "rotation": [-90.0, 0.0, 0.0],
+      "roll": -45.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "flavour": "Fragile, but everything she touches burns."
+  },
+  {
+    "id": "Duelist",
+    "name": "Duelist",
+    "title": "The Blade",
+    "portrait": "character/Duelist",
+    "skillId": "cyclone",
+    "life": 108,
+    "armour": 8,
+    "moveSpeed": 124,
+    "damagePct": 12,
+    "critChance": 7,
+    "pickupRadius": 90,
+    "archetype": "short_range_block",
+    "strengths": "High close damage, block and armour",
+    "weaknesses": "Very short range",
+    "passive": {
+      "name": "Momentum",
+      "text": "+0.5% Attack Speed per level.",
+      "perLevel": [
+        {"stat": "AttackSpeed", "type": "Addition", "value": 0.005}
+      ]
+    },
+    "starterWeapon": {
+      "id": "starforge",
+      "name": "Starforge",
+      "baseType": "Infernal Sword",
+      "family": "two_hand_sword",
+      "slot": "two_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/starforge.glb",
+      "tags": ["sword", "two_hand", "physical", "melee"],
+      "bonus": {"damagePct": 18, "critChance": 3, "armour": 6},
+      "scale": 120.0,
+      "rotation": [0.0, -45.0, 45.0],
+      "roll": 0.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "flavour": "Quick cuts, close range, no wasted motion."
+  },
+  {
+    "id": "Templar",
+    "name": "Templar",
+    "title": "The Zealot",
+    "portrait": "character/Templar",
+    "skillId": "ice-nova",
+    "life": 114,
+    "armour": 10,
+    "moveSpeed": 110,
+    "damagePct": 6,
+    "critChance": 5,
+    "pickupRadius": 94,
+    "archetype": "tanky_aoe",
+    "strengths": "Very tanky, versatile AoE",
+    "weaknesses": "Average mobility and boss damage",
+    "passive": {
+      "name": "Consecrated",
+      "text": "+1% Cold Damage and +0.5% Area of Effect per level.",
+      "perLevel": [
+        {"stat": "IceDamage", "type": "Addition", "value": 0.01},
+        {"stat": "SizeMultiplier", "type": "Addition", "value": 0.005}
+      ]
+    },
+    "starterWeapon": {
+      "id": "pledge-of-hands",
+      "name": "Pledge of Hands",
+      "baseType": "Judgement Staff",
+      "family": "staff",
+      "slot": "two_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/pledge-of-hands.glb",
+      "tags": ["staff", "two_hand", "aoe", "spell"],
+      "bonus": {"maxLifePct": 10, "armour": 15, "areaPct": 8},
+      "scale": 100.0,
+      "rotation": [-20.0, 0.0, 0.0],
+      "offset": [-0.06, -0.12, -0.1]
+    },
+    "flavour": "Wades in and discharges everything around him."
+  },
+  {
+    "id": "Shadow",
+    "name": "Shadow",
+    "title": "The Assassin",
+    "portrait": "character/Shadow",
+    "skillId": "viper-strike",
+    "life": 88,
+    "armour": 4,
+    "moveSpeed": 128,
+    "damagePct": 10,
+    "critChance": 9,
+    "pickupRadius": 100,
+    "archetype": "dot_clear",
+    "strengths": "Poison spreads and melts packs",
+    "weaknesses": "Squishy, short range",
+    "passive": {
+      "name": "Lethality",
+      "text": "+1% Chaos Damage per level.",
+      "perLevel": [
+        {"stat": "DamageMultiplier", "type": "Addition", "value": 0.01}
+      ]
+    },
+    "starterWeapon": {
+      "id": "binos-kitchen-knife",
+      "name": "Bino's Kitchen Knife",
+      "baseType": "Slaughter Knife",
+      "family": "dagger",
+      "slot": "one_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/binos-kitchen-knife.glb",
+      "tags": ["dagger", "one_hand", "poison", "dot"],
+      "bonus": {"moveSpeedPct": 6, "critChance": 3},
+      "traits": {"poisonSpread": 3.2},
+      "scale": 100.0,
+      "rotation": [-45.0, 0.0, 45.0],
+      "roll": 90.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "offhand": {
+      "id": "binos-kitchen-knife",
+      "name": "Bino's Kitchen Knife",
+      "baseType": "Slaughter Knife",
+      "family": "dagger",
+      "slot": "off_hand",
+      "grip": "L_Weapon",
+      "model": "res://assets/weapons/binos-kitchen-knife.glb",
+      "bonus": {},
+      "scale": 100.0,
+      "rotation": [-45.0, 0.0, -45.0],
+      "roll": 90.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "flavour": "Never stops moving; the blades do the work."
+  },
+  {
+    "id": "Scion",
+    "name": "Scion",
+    "title": "The Exile",
+    "portrait": "character/Scion",
+    "skillId": "arc",
+    "life": 100,
+    "armour": 6,
+    "moveSpeed": 120,
+    "damagePct": 10,
+    "critChance": 6,
+    "pickupRadius": 94,
+    "archetype": "versatile_scion",
+    "strengths": "Cross-class upgrades, balanced stats",
+    "weaknesses": "Weaker versions of every specialist upgrade",
+    "passive": {
+      "name": "Resonance",
+      "text": "+1% Lightning Damage per level; Arc gains +1 chain every 10 levels (max +3).",
+      "perLevel": [
+        {"stat": "LightningDamage", "type": "Addition", "value": 0.01},
+        {"stat": "Projectiles", "type": "Flat", "value": 1, "every": 10, "max": 3}
+      ]
+    },
+    "starterWeapon": {
+      "id": "the-dark-seer",
+      "name": "The Dark Seer",
+      "baseType": "Sceptre",
+      "family": "scepter",
+      "slot": "one_hand",
+      "grip": "R_Weapon",
+      "model": "res://assets/weapons/the-dark-seer.glb",
+      "tags": ["sceptre", "one_hand", "elemental", "versatile"],
+      "bonus": {"damagePct": 8, "moveSpeedPct": 3},
+      "scale": 100.0,
+      "rotation": [-90.0, 0.0, 45.0],
+      "roll": -45.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "offhand": {
+      "id": "the-dark-seer",
+      "name": "The Dark Seer",
+      "baseType": "Sceptre",
+      "family": "scepter",
+      "slot": "off_hand",
+      "grip": "L_Weapon",
+      "model": "res://assets/weapons/the-dark-seer.glb",
+      "bonus": {},
+      "scale": 100.0,
+      "rotation": [-90.0, 0.0, 45.0],
+      "roll": 45.0,
+      "offset": [0.0, 0.0, 0.0]
+    },
+    "flavour": "A little of everything, chained through the crowd."
+  }
+]
+

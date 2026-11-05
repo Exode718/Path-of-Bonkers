@@ -1,0 +1,929 @@
+{
+ "ECharacter": {
+  "Fox": 0,
+  "Calcium": 1,
+  "SirOofie": 2,
+  "Cl4nk": 3,
+  "Megachad": 4,
+  "Ogre": 5,
+  "Robinette": 6,
+  "Athena": 7,
+  "Birdo": 8,
+  "Bush": 9,
+  "Bandit": 10,
+  "Monke": 11,
+  "Noelle": 12,
+  "TonyMcZoom": 13,
+  "Amog": 14,
+  "Spaceman": 15,
+  "Ninja": 16,
+  "Vlad": 17,
+  "Dicehead": 18,
+  "SirChadwell": 19,
+  "Roberto": 20
+ },
+ "EFrictionSurface": {
+  "Normal": 0,
+  "Ice": 1
+ },
+ "CrouchState": {
+  "None": 0,
+  "Crouching": 1,
+  "Sliding": 2
+ },
+ "ECameraState": {
+  "Portal": 0,
+  "Player3rd": 1,
+  "Player1st": 2,
+  "Death": 3
+ },
+ "EWeapon": {
+  "None": -1,
+  "FireStaff": 0,
+  "Bone": 1,
+  "Sword": 2,
+  "Revolver": 3,
+  "Aura": 4,
+  "Axe": 5,
+  "Bow": 6,
+  "Aegis": 7,
+  "Test": 8,
+  "LightningStaff": 9,
+  "Flamewalker": 10,
+  "Rockets": 11,
+  "Bananarang": 12,
+  "Tornado": 13,
+  "Dexecutioner": 14,
+  "Sniper": 15,
+  "Frostwalker": 16,
+  "SpaceNoodle": 17,
+  "DragonsBreath": 18,
+  "Chunkers": 19,
+  "Mine": 20,
+  "PoisonFlask": 21,
+  "BlackHole": 22,
+  "Katana": 23,
+  "BloodMagic": 24,
+  "BluetoothDagger": 25,
+  "Dice": 26,
+  "HeroSword": 27,
+  "CorruptSword": 28,
+  "Shotgun": 29,
+  "Scythe": 30
+ },
+ "ELavaState": {
+  "Idle": 0,
+  "Rising": 1,
+  "UpIdle": 2,
+  "Lowering": 3
+ },
+ "EDungeonType": {
+  "Normal": 0,
+  "BossDungeon": 1
+ },
+ "TerrainType": {
+  "Water": 0,
+  "Sand": 1,
+  "Grass": 2
+ },
+ "DrawMode": {
+  "NoiseMap": 0,
+  "Mesh": 1,
+  "FalloffMap": 2,
+  "ColorMap": 3
+ },
+ "BoolSetting": {
+  "Off": 0,
+  "On": 1
+ },
+ "VSync": {
+  "Off": 0,
+  "Always": 1,
+  "Half": 2
+ },
+ "GrassQuality": {
+  "Low": 0,
+  "Medium": 1,
+  "High": 2
+ },
+ "ShadowQuality": {
+  "Off": 0,
+  "Hard": 1,
+  "Soft": 2
+ },
+ "ShadowResolution": {
+  "Low": 0,
+  "Medium": 1,
+  "High": 2,
+  "Ultra": 3
+ },
+ "TextureQuality": {
+  "Low": 0,
+  "Medium": 1,
+  "High": 2,
+  "Ultra": 3
+ },
+ "AntiAliasing": {
+  "Off": 0,
+  "x2": 1,
+  "x4": 2,
+  "x8": 3
+ },
+ "Bloom": {
+  "Off": 0,
+  "Fast": 1,
+  "Fancy": 2
+ },
+ "EControllerType": {
+  "Xbox": 0,
+  "SteamDeck": 1,
+  "Playstation": 2,
+  "PC": 3
+ },
+ "EHpBarColor": {
+  "Red": 0,
+  "White": 1,
+  "Yellow": 2,
+  "Blue": 3,
+  "Magenta": 4
+ },
+ "EEnemyTargetingMode": {
+  "SmartAim": 0,
+  "ClosestEnemy": 1
+ },
+ "EChatUserType": {
+  "Game": 0,
+  "Server": 1,
+  "Player": 2,
+  "OtherPlayerStatus": 3,
+  "Lobby": 4
+ },
+ "EButtonState": {
+  "Active": 0,
+  "Inactive": 1,
+  "InactiveWithSelection": 2
+ },
+ "Mode": {
+  "OutlineAll": 0,
+  "OutlineVisible": 1,
+  "OutlineHidden": 2,
+  "OutlineAndSilhouette": 3,
+  "SilhouetteOnly": 4
+ },
+ "ColorDeficiencyType": {
+  "None": 0,
+  "Protanopia": 1,
+  "Deuteranopia": 2,
+  "Tritanopia": 3
+ },
+ "DataFormat": {
+  "Text": 0,
+  "Binary": 1
+ },
+ "ActionMappingSaveMode": {
+  "ByController": 0,
+  "ByControllerElementRole": 1
+ },
+ "PointerEventType": {
+  "Mouse": 0,
+  "Touch": 1
+ },
+ "AllowedTypes": {
+  "All": 0,
+  "Glyphs": 1,
+  "Text": 2
+ },
+ "TypeFlags": {
+  "None": 0,
+  "Glyph": 1,
+  "Text": 2,
+  "All": -1
+ },
+ "TagType": {
+  "ControllerElement": 0,
+  "Action": 1,
+  "Player": 2
+ },
+ "DisplayType": {
+  "Glyph": 0,
+  "Text": 1,
+  "GlyphOrText": 2
+ },
+ "Axis": {
+  "None": 0,
+  "X": 1,
+  "Y": 2,
+  "Z": 4,
+  "NegX": 8,
+  "NegY": 22,
+  "NegZ": 50
+ },
+ "SnapUnit": {
+  "Meter": 0,
+  "Centimeter": 1,
+  "Millimeter": 2,
+  "Inch": 3,
+  "Foot": 4,
+  "Yard": 5,
+  "Parsec": 6
+ },
+ "ShakeState": {
+  "FadingIn": 0,
+  "Sustained": 1,
+  "FadingOut": 2,
+  "Stopped": 3
+ },
+ "ShakeType": {
+  "OneShot": 0,
+  "Sustained": 1
+ },
+ "XpTier": {
+  "Low": 0,
+  "Medium": 10,
+  "High": 50
+ },
+ "EEnemy": {
+  "Skeleton": 0,
+  "GoldenSkeleton": 1,
+  "XpSkeleton": 2,
+  "ArmoredSkeleton": 3,
+  "SkeletonDusty": 4,
+  "ArmoredSkeletonDusty": 5,
+  "Ghoul": 6,
+  "MinibossPig": 7,
+  "Mummy": 8,
+  "Slime": 9,
+  "Test": 10,
+  "Test2": 11,
+  "Goblin": 12,
+  "GoblinStrong": 13,
+  "GoblinTank": 14,
+  "MinibossGolem": 15,
+  "Ghost": 16,
+  "GreaterGhost": 17,
+  "SkeletonMage": 18,
+  "Ent1": 19,
+  "Ent2": 20,
+  "Ent3": 21,
+  "BoomerSpider": 22,
+  "Golem": 23,
+  "Bee": 24,
+  "MinibossGolemSand": 25,
+  "Scorpion": 26,
+  "MinibossScorpion": 27,
+  "Wisp": 28,
+  "CactusShooter": 29,
+  "ScorpionMedium": 30,
+  "MummyTank": 31,
+  "MummyAncient": 32,
+  "Tumblebone": 33,
+  "Pharaoh1": 34,
+  "Pharaoh2": 35,
+  "Pharaoh3": 36,
+  "Bandit": 37,
+  "Bush": 38,
+  "GhostRed": 39,
+  "GhostPurple": 40,
+  "Zombie": 41,
+  "Head": 42,
+  "GhostKing": 43,
+  "GhostGrave1": 44,
+  "GhostGrave2": 45,
+  "GhostGrave3": 46,
+  "GhostGrave4": 47,
+  "GhostInvincible": 48,
+  "Ghostham": 49,
+  "CalciumDad": 50,
+  "FrogGreen": 51,
+  "FrogBlue": 52,
+  "FrogRed": 53
+ },
+ "State": {
+  "Normal": 0,
+  "Sucked": 1,
+  "Charmed": 2
+ },
+ "ESkinType": {
+  "Default": 0,
+  "Kills": 1,
+  "FinalBoss": 3,
+  "Speedrun": 2,
+  "Gold": 4,
+  "Extra1": 5,
+  "Extra2": 6,
+  "Extra3": 7,
+  "Extra4": 8,
+  "Extra5": 9,
+  "Extra6": 10,
+  "Crypt": 11,
+  "Custom1": 12
+ },
+ "ETome": {
+  "Damage": 0,
+  "Agility": 1,
+  "Cooldown": 2,
+  "Quantity": 3,
+  "Knockback": 4,
+  "Armor": 5,
+  "Health": 6,
+  "Regeneration": 7,
+  "Size": 8,
+  "ProjectileSpeed": 9,
+  "Duration": 10,
+  "Evasion": 11,
+  "Attraction": 12,
+  "Luck": 13,
+  "Xp": 14,
+  "Golden": 15,
+  "Precision": 16,
+  "Shield": 17,
+  "Blood": 18,
+  "Thorns": 19,
+  "Bounce": 20,
+  "Cursed": 21,
+  "Silver": 22,
+  "Balance": 23,
+  "Chaos": 24,
+  "Gambler": 25,
+  "Hoarder": 26
+ },
+ "EShopItem": {
+  "Refresh": 0,
+  "Skip": 1,
+  "Banish": 2,
+  "Weapons": 3,
+  "Tomes": 4,
+  "Gold": 5,
+  "Silver": 6,
+  "Boombox": 7,
+  "Toggler": 8
+ },
+ "EAchievementDifficulty": {
+  "Easy": 0,
+  "Medium": 1,
+  "Hard": 2,
+  "Cooked": 3
+ },
+ "EAchievementType": {
+  "General": 0,
+  "Characters": 1,
+  "Weapons": 2,
+  "Challenges": 3,
+  "Items": 4,
+  "Tomes": 5,
+  "Skins": 6,
+  "Hats": 7
+ },
+ "EMap": {
+  "None": 0,
+  "Forest": 1,
+  "Desert": 2,
+  "Hell": 4,
+  "Graveyard": 8
+ },
+ "EMapType": {
+  "Tiles": 0,
+  "ProceduralMesh": 1
+ },
+ "EHat": {
+  "None": 0,
+  "Santa": 1,
+  "Microwave": 2,
+  "ShadyHatBlack": 3,
+  "ShadyHatBlue": 4,
+  "ShadyHatPink": 5,
+  "ShadyHatGold": 6,
+  "Glasses": 7,
+  "Pot": 8,
+  "Kevin": 9,
+  "Cheese": 10,
+  "Crown": 11,
+  "Wizard": 12,
+  "FrogGreen": 13,
+  "FrogBlue": 14,
+  "FrogOrange": 15,
+  "Medieval": 16,
+  "Tophat": 17,
+  "TophatLong": 18,
+  "Pilot": 19,
+  "Sheriff": 20,
+  "Clown": 21,
+  "Headset": 22
+ },
+ "EMeshForHat": {
+  "Default": 0,
+  "Low": 1,
+  "Lowest": 2
+ },
+ "EInputItem": {
+  "Aim": 0,
+  "Jump": 1,
+  "Slide": 2
+ },
+ "EStat": {
+  "MaxHealth": 0,
+  "HealthRegen": 1,
+  "Shield": 2,
+  "Thorns": 3,
+  "Armor": 4,
+  "Evasion": 5,
+  "Evolve": 6,
+  "DamageReductionMultiplier": 7,
+  "DamageCooldownMultiplier": 8,
+  "SizeMultiplier": 9,
+  "DurationMultiplier": 10,
+  "ProjectileSpeedMultiplier": 11,
+  "DamageMultiplier": 12,
+  "Unused0": 13,
+  "EffectDurationMultiplier": 14,
+  "AttackSpeed": 15,
+  "Projectiles": 16,
+  "Lifesteal": 17,
+  "CritChance": 18,
+  "CritDamage": 19,
+  "FireDamage": 20,
+  "IceDamage": 21,
+  "LightningDamage": 22,
+  "EliteDamageMultiplier": 23,
+  "KnockbackMultiplier": 24,
+  "MoveSpeedMultiplier": 25,
+  "JumpHeight": 26,
+  "FallDamageReduction": 27,
+  "Slam": 28,
+  "PickupRange": 29,
+  "Luck": 30,
+  "GoldIncreaseMultiplier": 31,
+  "XpIncreaseMultiplier": 32,
+  "ChestIncreaseMultiplier": 33,
+  "ChestPriceMultiplier": 34,
+  "ShopPriceReduction": 35,
+  "Holiness": 36,
+  "Wickedness": 37,
+  "Difficulty": 38,
+  "EliteSpawnIncrease": 39,
+  "PowerupBoostMultiplier": 40,
+  "PowerupChance": 41,
+  "BurnChance": 42,
+  "FreezeChance": 43,
+  "WeaponBurstCooldown": 44,
+  "ProjectileBounces": 45,
+  "ExtraJumps": 46,
+  "Overheal": 47,
+  "HealingMultiplier": 48,
+  "SilverIncreaseMultiplier": 49,
+  "EnemyAmountMultiplier": 50,
+  "EnemySizeMultiplier": 51,
+  "EnemySpeedMultiplier": 52,
+  "EnemyHpMultiplier": 53,
+  "EnemyDamageMultiplier": 54,
+  "EnemyScalingMultiplier": 55,
+  "PoisonDamageMultiplier": 56
+ },
+ "ELeaderboardCategory": {
+  "Kills": 0,
+  "Speedrun": 1
+ },
+ "NavDirection": {
+  "Up": 0,
+  "Down": 1,
+  "Left": 2,
+  "Right": 3
+ },
+ "ERewardWindowType": {
+  "Levelup": 0,
+  "ChargeShrine": 1
+ },
+ "EEncounter": {
+  "Levelup": 0,
+  "RandomStats": 1,
+  "GreedAltar": 2,
+  "ChestNormal": 3,
+  "ChestFree": 4,
+  "ChestEvil": 5,
+  "Moai": 6,
+  "ShadyGuy": 7,
+  "BalanceShrine": 8,
+  "Microwave": 9,
+  "ChestFreeCrypt": 10,
+  "ChestGhost": 11
+ },
+ "EEncounterEffect": {
+  "StatChange": 0,
+  "EGold": 1,
+  "EHealth": 2,
+  "StatChangeBalanceShrine": 3
+ },
+ "EObjective": {
+  "Generic": 0,
+  "CryptKeys": 1
+ },
+ "EEasing": {
+  "Linear": 0,
+  "InOutCirc": 1,
+  "OutCirc": 2
+ },
+ "EPotatoFlags": {
+  "None": 0,
+  "Collision": 1,
+  "Kills": 2,
+  "Gold": 4,
+  "Hp": 8,
+  "Damage": 16,
+  "KillsPerMinute": 32,
+  "HpTamper": 64
+ },
+ "SettingType": {
+  "Enum": 0,
+  "Slider": 1,
+  "Resolution": 2,
+  "Control": 3,
+  "Language": 4,
+  "ControlNew": 5,
+  "ControllerDisplay": 6
+ },
+ "EMyStat": {
+  "kills": 0,
+  "goldEarned": 1,
+  "goldSpent": 2,
+  "chestsOpened": 3,
+  "itemsPickedUp": 4,
+  "eliteKills": 5,
+  "bossKills": 6,
+  "xpGained": 7,
+  "skeletonKills": 8,
+  "damageReductionArmorAsKnight": 9,
+  "damageReductionArmor": 10,
+  "projectilesFired": 11,
+  "evades": 12,
+  "potsBroken": 13,
+  "shrineSucc": 14,
+  "fireKills": 15,
+  "shrineCharge": 16,
+  "lifestealHealing": 17,
+  "shrineChallenge": 18,
+  "crits": 19,
+  "chestsBought": 20,
+  "minibossKills": 21,
+  "runs": 22,
+  "silverEarned": 23,
+  "cactusKillsWithThorns": 24,
+  "lightningKills": 25,
+  "standingStillKills": 26,
+  "bloodMagicProcs": 27,
+  "finalBossKills": 28,
+  "icecubeFreezes": 29,
+  "foxWispsKills": 30,
+  "powerupsUsed": 31,
+  "goblinKills": 32,
+  "minibossKillsCalcium": 33,
+  "killsInTornadoWithTornado": 34,
+  "moldyCheeseProcs": 35,
+  "questsCompleted": 36,
+  "challengesCompleted": 37,
+  "wallhugs": 38,
+  "unlocksPurchased": 39,
+  "shrineChargeSandstorm": 40,
+  "aegisBlocks": 41,
+  "silver": 42,
+  "microwavesExploded": 43,
+  "shadyGuysBlack": 44,
+  "shadyGuysBlue": 45,
+  "shadyGuysPink": 46,
+  "shadyGuysGold": 47,
+  "quinsMaskKillsAsAthena": 48,
+  "kevinPunches": 49,
+  "birdoFlyingMinesKills": 50
+ },
+ "ESpeedrunTime": {
+  "Crypt": 0
+ },
+ "EOpacityCurve": {
+  "Linear": 0,
+  "OutCirc": 1,
+  "Custom": 2
+ },
+ "EFillType": {
+  "Nothing": 0,
+  "Top": 1,
+  "Bottom": 2,
+  "Both": 3
+ },
+ "ETileEdgeType": {
+  "Flat": 0,
+  "SlopeRight": 1,
+  "SlopeLeft": 2
+ },
+ "MapEdgeFillType": {
+  "Island": 0,
+  "Walls": 1,
+  "Trees": 2,
+  "None": 3
+ },
+ "EBiasStrategy": {
+  "Gaussian": 0,
+  "Linear": 1
+ },
+ "EHeightGenerationStrategy": {
+  "Hein": 0,
+  "Me": 1
+ },
+ "ERarity": {
+  "New": 0,
+  "Common": 1,
+  "Uncommon": 2,
+  "Rare": 3,
+  "Epic": 4,
+  "Legendary": 5
+ },
+ "EAmplificationMode": {
+  "Bounce": 0,
+  "Pierce": 1,
+  "ShieldStack": 2
+ },
+ "EProjectileTargetMode": {
+  "RandomDirection": 0,
+  "RandomTarget": 1,
+  "Index0": 2,
+  "ClosestTargetInVision": 3,
+  "MoveDirection": 4
+ },
+ "EStatCategory": {
+  "Offensive": 0,
+  "Defensive": 1,
+  "Movement": 2,
+  "Utility": 3,
+  "Difficulty": 4,
+  "Coolness": 5,
+  "Null": 6
+ },
+ "EStatModifyType": {
+  "Addition": 0,
+  "Multiplication": 1,
+  "Flat": 2
+ },
+ "EStatusEffect": {
+  "Haste": 0,
+  "Rage": 1,
+  "Shield": 2,
+  "Stonks": 3,
+  "TimeFreeze": 4,
+  "Invulnerability": 5,
+  "Slow": 6,
+  "Freeze": 7,
+  "Bleed": 8,
+  "Poison": 9,
+  "BossPoison": 10
+ },
+ "EPickup": {
+  "Xp": 0,
+  "Gold": 1,
+  "Health": 2,
+  "Nuke": 3,
+  "Time": 4,
+  "Shield": 5,
+  "Rage": 6,
+  "Haste": 7,
+  "Stonks": 8,
+  "Magnet": 9,
+  "Silver": 10
+ },
+ "EItem": {
+  "Key": 0,
+  "Beer": 1,
+  "SpikyShield": 2,
+  "Bonker": 3,
+  "SlipperyRing": 4,
+  "CowardsCloak": 5,
+  "GymSauce": 6,
+  "Battery": 7,
+  "PhantomShroud": 8,
+  "ForbiddenJuice": 9,
+  "DemonBlade": 10,
+  "GrandmasSecretTonic": 11,
+  "GiantFork": 12,
+  "MoldyCheese": 13,
+  "GoldenSneakers": 14,
+  "SpicyMeatball": 15,
+  "Chonkplate": 16,
+  "LightningOrb": 17,
+  "IceCube": 18,
+  "DemonicBlood": 19,
+  "DemonicSoul": 20,
+  "BeefyRing": 21,
+  "Dragonfire": 22,
+  "GoldenGlove": 23,
+  "GoldenShield": 24,
+  "ZaWarudo": 25,
+  "OverpoweredLamp": 26,
+  "Feathers": 27,
+  "Ghost": 28,
+  "SluttyCannon": 29,
+  "TurboSocks": 30,
+  "ShatteredWisdom": 31,
+  "EchoShard": 32,
+  "SuckyMagnet": 33,
+  "Backpack": 34,
+  "Clover": 35,
+  "Campfire": 36,
+  "Rollerblades": 37,
+  "Skuleg": 38,
+  "EagleClaw": 39,
+  "Scarf": 40,
+  "Anvil": 41,
+  "Oats": 42,
+  "CursedDoll": 43,
+  "EnergyCore": 44,
+  "ElectricPlug": 45,
+  "BobDead": 46,
+  "SoulHarvester": 47,
+  "Mirror": 48,
+  "JoesDagger": 49,
+  "WeebHeadset": 50,
+  "SpeedBoi": 51,
+  "Gasmask": 52,
+  "ToxicBarrel": 53,
+  "HolyBook": 54,
+  "BrassKnuckles": 55,
+  "IdleJuice": 56,
+  "Kevin": 57,
+  "Borgar": 58,
+  "Medkit": 59,
+  "GamerGoggles": 60,
+  "UnstableTransfusion": 61,
+  "BloodyCleaver": 62,
+  "CreditCardRed": 63,
+  "CreditCardGreen": 64,
+  "BossBuster": 65,
+  "LeechingCrystal": 66,
+  "TacticalGlasses": 67,
+  "Cactus": 68,
+  "CageKey": 69,
+  "IceCrystal": 70,
+  "TimeBracelet": 71,
+  "GloveLightning": 72,
+  "GlovePoison": 73,
+  "GloveBlood": 74,
+  "GloveCurse": 75,
+  "GlovePower": 76,
+  "Wrench": 77,
+  "Beacon": 78,
+  "GoldenRing": 79,
+  "QuinsMask": 80,
+  "CryptKey": 81,
+  "OldMask": 82,
+  "Snek": 83,
+  "Pot": 84,
+  "BobsLantern": 85,
+  "Pumpkin": 86,
+  "WizardsHat": 87
+ },
+ "EItemRarity": {
+  "Common": 0,
+  "Rare": 1,
+  "Epic": 2,
+  "Legendary": 3,
+  "Corrupted": 4,
+  "Quest": 5
+ },
+ "EChest": {
+  "Normal": 0,
+  "Corrupt": 1,
+  "Free": 2,
+  "FreeCrypt": 3,
+  "Ghost": 4
+ },
+ "EPassive": {
+  "Bullseye": 0,
+  "RngBlessing": 1,
+  "SpeedDemon": 2,
+  "Reinforced": 3,
+  "Flowstate": 4,
+  "CritHappens": 5,
+  "Warrior": 6,
+  "Flex": 7,
+  "WallClimb": 8,
+  "None": 9,
+  "Float": 10,
+  "Enduring": 11,
+  "Plague": 12,
+  "Quantum": 13,
+  "Shadowstep": 14,
+  "Gamba": 15,
+  "Vampire": 16,
+  "Curse": 17,
+  "Stonks": 18,
+  "LockIn": 19,
+  "Zap": 20,
+  "Hoarder": 21
+ },
+ "EAbiltiyActive": {
+  "Dash": 0
+ },
+ "EWaveType": {
+  "Normal": 0,
+  "Swarm": 1,
+  "Boss": 2,
+  "FinalSwarm": 3
+ },
+ "ETimelineEvent": {
+  "EAddEnemyCard": 0,
+  "EMiniBoss": 1,
+  "ESwarm": 2
+ },
+ "EDamageEffect": {
+  "None": 0,
+  "Bonk": 1,
+  "Megacrit": 2,
+  "Poison": 3,
+  "Lightning": 4,
+  "Fire": 5,
+  "Execute": 6,
+  "Cursed": 7,
+  "Echo": 8,
+  "Bloodmark": 9
+ },
+ "EElement": {
+  "Neutral": 0,
+  "Lightning": 1,
+  "Ice": 2,
+  "Fire": 3,
+  "Bleed": 4
+ },
+ "EEnemyAttack": {
+  "RootSpikes": 0,
+  "StoneSpikes": 1,
+  "PoisonSpikes": 2,
+  "PoisonSpikeProjectiles": 3,
+  "CactusProjectile": 4,
+  "SandPillar": 5,
+  "BanditSlice": 6,
+  "SniperShot": 7,
+  "GroundSlam": 8,
+  "MudSplash": 9,
+  "GhostBoss": 10,
+  "GhostBossSpike": 11,
+  "BonePillar": 12
+ },
+ "EDebuff": {
+  "Poison": 1,
+  "Freeze": 2,
+  "Burn": 4,
+  "Stun": 8,
+  "Echo": 16,
+  "Charm": 32,
+  "Bloodmark": 64,
+  "DebuffsWithCap": 42
+ },
+ "EAudioSpamFilterType": {
+  "Crit": 0,
+  "GrandmaCrit": 1,
+  "FireballExplosion": 2,
+  "FireballMuzzle": 3
+ },
+ "MusicCategory": {
+  "Forest": 0,
+  "Desert": 1,
+  "Other": 2,
+  "Graveyard": 3
+ },
+ "EMovementState": {
+  "Idle": 1,
+  "Walking": 2,
+  "Crouching": 4,
+  "Sliding": 8,
+  "Airborne": 16,
+  "Wallrunning": 32,
+  "CategoryCrouched": 12,
+  "CategoryFootstepNoise": 34
+ },
+ "DcFlags": {
+  "None": 0,
+  "BypassEvade": 1,
+  "BossDamage": 2,
+  "BypassAegis": 4,
+  "FinalBossDamage": 8,
+  "IgnoreArmor": 16,
+  "BypassAll": 5
+ },
+ "EEnemyFlag": {
+  "None": 0,
+  "Elite": 1,
+  "Boss": 2,
+  "StageBoss": 4,
+  "Challenge": 8,
+  "SummonerMiniboss": 16,
+  "FinalBoss": 32,
+  "AnyBoss": 54
+ },
+ "EEnemyState": {
+  "Default": 0,
+  "Teleporting": 1,
+  "Idle": 2,
+  "FollowTarget": 3
+ },
+ "BeamType": {
+  "Type1": 0,
+  "Type2": 1,
+  "Type3": 2
+ }
+}

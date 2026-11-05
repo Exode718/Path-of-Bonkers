@@ -1,0 +1,12 @@
+{
+  "name": "wraeclast-3d",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "models": "node build-glb.mjs"
+  },
+  "devDependencies": {
+    "gl-matrix": "^3.4.4"
+  }
+}

@@ -1,0 +1,275 @@
+[
+  {
+    "slot": "Damage",
+    "id": "tome-damage",
+    "name": "Tome of Damage",
+    "description": "+{value}% Damage.",
+    "displayScale": 100.0,
+    "nativeStat": 12,
+    "nativeType": 1,
+    "nativeValue": 0.08
+  },
+  {
+    "slot": "Agility",
+    "id": "tome-agility",
+    "name": "Tome of Agility",
+    "description": "+{value}% Movement Speed.",
+    "displayScale": 100.0,
+    "nativeStat": 25,
+    "nativeType": 0,
+    "nativeValue": 0.15,
+    "rewriteStat": 25,
+    "rewriteType": 0,
+    "rewriteValue": 0.05
+  },
+  {
+    "slot": "Cooldown",
+    "id": "tome-cooldown",
+    "name": "Tome of Haste",
+    "description": "+{value}% Attack Speed, so skills come off cooldown sooner.",
+    "displayScale": 100.0,
+    "nativeStat": 15,
+    "nativeType": 0,
+    "nativeValue": 0.075
+  },
+  {
+    "slot": "Quantity",
+    "id": "tome-quantity",
+    "name": "Tome of Quantity",
+    "description": "Adds {value} Projectile per stack; fractions accumulate (2 common stacks = +1). Arc gains the same in jumps.",
+    "displayScale": 1.0,
+    "shapes": [ "projectile", "chain" ],
+    "nativeStat": 16,
+    "nativeType": 2,
+    "nativeValue": 1.0,
+    "rewriteStat": 16,
+    "rewriteType": 2,
+    "rewriteValue": 0.5
+  },
+  {
+    "slot": "Knockback",
+    "id": "tome-knockback",
+    "name": "Tome of Weight",
+    "description": "+{value}% Knockback.",
+    "displayScale": 100.0,
+    "shapes": [ "projectile", "nova", "melee", "cyclone", "chain", "ground", "orbit" ],
+    "nativeStat": 24,
+    "nativeType": 0,
+    "nativeValue": 0.2
+  },
+  {
+    "slot": "Armor",
+    "id": "tome-armor",
+    "name": "Tome of Armour",
+    "description": "Adds {value} Armour, lowering the damage you take.",
+    "displayScale": 100.0,
+    "nativeStat": 4,
+    "nativeType": 2,
+    "nativeValue": 0.12
+  },
+  {
+    "slot": "Health",
+    "id": "tome-health",
+    "name": "Tome of Health",
+    "description": "+{value} maximum Life.",
+    "displayScale": 1.0,
+    "nativeStat": 0,
+    "nativeType": 2,
+    "nativeValue": 25.0
+  },
+  {
+    "slot": "Regeneration",
+    "id": "tome-regen",
+    "name": "Tome of Regeneration",
+    "description": "+{value} Health Regeneration per minute.",
+    "displayScale": 1.0,
+    "nativeStat": 1,
+    "nativeType": 2,
+    "nativeValue": 40.0
+  },
+  {
+    "slot": "Size",
+    "id": "tome-size",
+    "name": "Tome of Area",
+    "description": "+{value}% Area of Effect for every skill (projectiles, novas, auras, chains and their mods).",
+    "displayScale": 100.0,
+    "nativeStat": 9,
+    "nativeType": 0,
+    "nativeValue": 0.1
+  },
+  {
+    "slot": "ProjectileSpeed",
+    "id": "tome-projectile-speed",
+    "name": "Tome of Velocity",
+    "description": "+{value}% Projectile Speed.",
+    "displayScale": 100.0,
+    "shapes": [ "projectile" ],
+    "nativeStat": 11,
+    "nativeType": 0,
+    "nativeValue": 0.15
+  },
+  {
+    "slot": "Duration",
+    "id": "tome-duration",
+    "name": "Tome of Duration",
+    "description": "+{value}% ailment duration.",
+    "displayScale": 100.0,
+    "nativeStat": 10,
+    "nativeType": 0,
+    "nativeValue": 0.15
+  },
+  {
+    "slot": "Evasion",
+    "id": "tome-evasion",
+    "name": "Tome of Evasion",
+    "description": "+{value}% Evasion.",
+    "displayScale": 100.0,
+    "nativeStat": 5,
+    "nativeType": 2,
+    "nativeValue": 0.1
+  },
+  {
+    "slot": "Attraction",
+    "id": "tome-swarm",
+    "name": "Tome of Swarm",
+    "description": "Adds {value} Projectile per stack; fractions accumulate (2 common stacks = +1). Arc gains the same in jumps.",
+    "displayScale": 1.0,
+    "shapes": [ "projectile", "chain" ],
+    "nativeStat": 29,
+    "nativeType": 0,
+    "nativeValue": 0.75,
+    "rewriteStat": 16,
+    "rewriteType": 2,
+    "rewriteValue": 0.5
+  },
+  {
+    "slot": "Luck",
+    "id": "tome-luck",
+    "name": "Tome of Luck",
+    "description": "+{value}% Luck.",
+    "displayScale": 100.0,
+    "nativeStat": 30,
+    "nativeType": 2,
+    "nativeValue": 0.08
+  },
+  {
+    "slot": "Xp",
+    "id": "tome-xp",
+    "name": "Tome of Experience",
+    "description": "+{value}% Experience gained.",
+    "displayScale": 100.0,
+    "nativeStat": 32,
+    "nativeType": 0,
+    "nativeValue": 0.07
+  },
+  {
+    "slot": "Precision",
+    "id": "tome-precision",
+    "name": "Tome of Precision",
+    "description": "+{value}% Critical Chance.",
+    "displayScale": 100.0,
+    "nativeStat": 18,
+    "nativeType": 2,
+    "nativeValue": 0.07
+  },
+  {
+    "slot": "Shield",
+    "id": "tome-shield",
+    "name": "Tome of Shield",
+    "description": "+{value} maximum Shield. Shield takes damage before Life and refills after a break from hits.",
+    "displayScale": 1.0,
+    "nativeStat": 2,
+    "nativeType": 2,
+    "nativeValue": 25.0
+  },
+  {
+    "slot": "Blood",
+    "id": "tome-blood",
+    "name": "Tome of Blood",
+    "description": "+{value}% Life Leech.",
+    "displayScale": 100.0,
+    "nativeStat": 17,
+    "nativeType": 2,
+    "nativeValue": 0.1
+  },
+  {
+    "slot": "Thorns",
+    "id": "tome-thorns",
+    "name": "Tome of Thorns",
+    "description": "+{value} Thorns: enemies that hit you take damage back.",
+    "displayScale": 1.0,
+    "nativeStat": 3,
+    "nativeType": 2,
+    "nativeValue": 15.0
+  },
+  {
+    "slot": "Cursed",
+    "id": "tome-cursed",
+    "name": "Tome of the Cursed",
+    "description": "+{value}% Difficulty. A cursed page: the run gets harder.",
+    "displayScale": 100.0,
+    "nativeStat": 38,
+    "nativeType": 2,
+    "nativeValue": 0.035
+  },
+  {
+    "slot": "Golden",
+    "id": "tome-avary",
+    "name": "Tome of Avarice",
+    "description": "+{value}% Gold from kills.",
+    "displayScale": 100.0,
+    "nativeStat": 31,
+    "nativeType": 0,
+    "nativeValue": 0.12
+  },
+  {
+    "slot": "Silver",
+    "id": "tome-ferocity",
+    "name": "Tome of Ferocity",
+    "description": "+{value}% Critical Damage.",
+    "displayScale": 100.0,
+    "nativeStat": 49,
+    "nativeType": 0,
+    "nativeValue": 0.12,
+    "rewriteStat": 19,
+    "rewriteType": 2,
+    "rewriteValue": 0.25
+  },
+  {
+    "slot": "Balance",
+    "id": "tome-balance",
+    "name": "Tome of Balance",
+    "description": "+{value}% to every stat.",
+    "displayScale": 100.0,
+    "nativeStat": -1,
+    "nativeType": -1,
+    "nativeValue": 0.0
+  },
+  {
+    "slot": "Chaos",
+    "id": "tome-chaos",
+    "name": "Tome of Chaos",
+    "description": "Boosts a random beneficial stat.",
+    "nativeStat": -1,
+    "nativeType": -1,
+    "nativeValue": 0.0
+  },
+  {
+    "slot": "Gambler",
+    "id": "tome-gamba",
+    "name": "Tome of Gamba",
+    "description": "A coin flip: a random beneficial stat is doubled, or a random stat is cut by the base value.",
+    "nativeStat": -1,
+    "nativeType": -1,
+    "nativeValue": 0.0
+  },
+  {
+    "slot": "Hoarder",
+    "id": "tome-hoarder",
+    "name": "Tome of Hoarding",
+    "description": "Grants a random item.",
+    "nativeStat": -1,
+    "nativeType": -1,
+    "nativeValue": 0.0
+  }
+]

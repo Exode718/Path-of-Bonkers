@@ -1,0 +1,1414 @@
+[
+  {
+    "slot": "Key",
+    "id": "goldwyrm",
+    "name": "Goldwyrm",
+    "stats": [
+      {
+        "stat": "GoldIncreaseMultiplier",
+        "type": "Addition",
+        "value": 0.35
+      },
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.175
+      }
+    ],
+    "text": "+35% Gold and +17.5% Fire Damage."
+  },
+  {
+    "slot": "Beer",
+    "id": "heatshiver",
+    "name": "Heatshiver",
+    "stats": [
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.25
+      },
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+25% Ice Damage and +25% Fire Damage."
+  },
+  {
+    "slot": "SpikyShield",
+    "id": "the-brass-dome",
+    "name": "The Brass Dome",
+    "stats": [
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 80
+      },
+      {
+        "stat": "Thorns",
+        "type": "Flat",
+        "value": 15
+      }
+    ],
+    "text": "+80 Armour and +15 Thorns.",
+    "rarity": "common"
+  },
+  {
+    "slot": "Bonker",
+    "id": "hateforge",
+    "name": "Hateforge",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.5
+      },
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.3
+      }
+    ],
+    "text": "+50% Damage and +30% Attack Speed."
+  },
+  {
+    "slot": "SlipperyRing",
+    "id": "briskwrap",
+    "name": "Briskwrap",
+    "stats": [
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.15
+      },
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.15
+      }
+    ],
+    "text": "+15% Movement Speed and +15% Evasion."
+  },
+  {
+    "slot": "CowardsCloak",
+    "id": "cloak-of-defiance",
+    "name": "Cloak of Defiance",
+    "stats": [
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.3
+      },
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.2
+      }
+    ],
+    "text": "+30% Evasion and +20% maximum Life."
+  },
+  {
+    "slot": "GymSauce",
+    "id": "meginords-girdle",
+    "name": "Meginord's Girdle",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.2
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.125
+      }
+    ],
+    "text": "+20% maximum Life and +12.5% Damage.",
+    "rarity": "rare"
+  },
+  {
+    "slot": "Battery",
+    "id": "lochtonial-caress",
+    "name": "Lochtonial Caress",
+    "stats": [
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.125
+      },
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.05
+      }
+    ],
+    "text": "+12.5% Attack Speed and +5% Movement Speed."
+  },
+  {
+    "slot": "PhantomShroud",
+    "id": "daressos-defiance",
+    "name": "Daresso's Defiance",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 20
+      }
+    ],
+    "text": "+25% Damage and +20 Armour."
+  },
+  {
+    "slot": "ForbiddenJuice",
+    "id": "blood-thorn",
+    "name": "Blood Thorn",
+    "stats": [
+      {
+        "stat": "Thorns",
+        "type": "Flat",
+        "value": 25
+      },
+      {
+        "stat": "MaxHealth",
+        "type": "Flat",
+        "value": 105
+      }
+    ],
+    "text": "+25 Thorns and +105 maximum Life."
+  },
+  {
+    "slot": "DemonBlade",
+    "id": "the-blood-reaper",
+    "name": "The Blood Reaper",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      }
+    ],
+    "text": "+30% Damage."
+  },
+  {
+    "slot": "GiantFork",
+    "id": "the-squire",
+    "name": "The Squire",
+    "stats": [
+      {
+        "stat": "Projectiles",
+        "type": "Flat",
+        "value": 1
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+1 Projectile Count and +25% Damage."
+  },
+  {
+    "slot": "MoldyCheese",
+    "id": "blackheart",
+    "name": "Blackheart",
+    "triggers": [
+      {
+        "on": "hit",
+        "effect": "poison",
+        "chance": 0.55,
+        "seconds": 3
+      }
+    ],
+    "text": "55% chance on hit to poison enemies for 3 s."
+  },
+  {
+    "slot": "GoldenSneakers",
+    "id": "lioneyes-glare",
+    "name": "Lioneye's Glare",
+    "stats": [
+      {
+        "stat": "ProjectileSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      },
+      {
+        "stat": "CritChance",
+        "type": "Flat",
+        "value": 0.3
+      }
+    ],
+    "text": "+30% Projectile Speed and +30% Critical Strike Chance."
+  },
+  {
+    "slot": "SpicyMeatball",
+    "id": "bottled-faith",
+    "name": "Bottled Faith",
+    "stats": [
+      {
+        "stat": "CritChance",
+        "type": "Flat",
+        "value": 0.35
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.55
+      }
+    ],
+    "text": "+35% Critical Strike Chance and +55% Damage."
+  },
+  {
+    "slot": "Chonkplate",
+    "id": "eternity-shroud",
+    "name": "Eternity Shroud",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.8
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.2
+      }
+    ],
+    "text": "+80% maximum Life and +20% Damage."
+  },
+  {
+    "slot": "LightningOrb",
+    "id": "omniscience",
+    "name": "Omniscience",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.4
+      },
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.4
+      },
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.4
+      }
+    ],
+    "text": "+40% Fire Damage, +40% Ice Damage and +40% Lightning Damage."
+  },
+  {
+    "slot": "IceCube",
+    "id": "the-halcyon",
+    "name": "The Halcyon",
+    "stats": [
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 1.1
+      },
+      {
+        "stat": "FreezeChance",
+        "type": "Flat",
+        "value": 0.6
+      }
+    ],
+    "text": "+110% Ice Damage and +60% Freeze Chance."
+  },
+  {
+    "slot": "DemonicBlood",
+    "id": "cherrubims-maleficence",
+    "name": "Cherrubim's Maleficence",
+    "stats": [
+      {
+        "stat": "Lifesteal",
+        "type": "Addition",
+        "value": 0.05
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+5% Lifesteal and +25% Damage."
+  },
+  {
+    "slot": "BeefyRing",
+    "id": "rumis-concoction",
+    "name": "Rumi's Concoction",
+    "stats": [
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 75
+      },
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.6
+      }
+    ],
+    "text": "+75 Armour and +60% Evasion."
+  },
+  {
+    "slot": "Dragonfire",
+    "id": "oriaths-end",
+    "name": "Oriath's End",
+    "triggers": [
+      {
+        "on": "kill",
+        "effect": "explode",
+        "value": 0.8,
+        "radius": 4
+      }
+    ],
+    "text": "Slain enemies explode for 80% of the killing hit."
+  },
+  {
+    "slot": "GoldenGlove",
+    "id": "sadimas-touch",
+    "name": "Sadima's Touch",
+    "stats": [
+      {
+        "stat": "GoldIncreaseMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      },
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.125
+      }
+    ],
+    "text": "+30% Gold and +12.5% Attack Speed."
+  },
+  {
+    "slot": "GoldenShield",
+    "id": "rathpith-globe",
+    "name": "Rathpith Globe",
+    "stats": [
+      {
+        "stat": "Shield",
+        "type": "Flat",
+        "value": 140
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 35
+      }
+    ],
+    "text": "+140 Shield and +35 Armour."
+  },
+  {
+    "slot": "ZaWarudo",
+    "id": "progenesis",
+    "name": "Progenesis",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.8
+      },
+      {
+        "stat": "Thorns",
+        "type": "Flat",
+        "value": 30
+      }
+    ],
+    "text": "+80% maximum Life and +30 Thorns."
+  },
+  {
+    "slot": "OverpoweredLamp",
+    "id": "ashes-of-the-stars",
+    "name": "Ashes of the Stars",
+    "stats": [
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.4
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.4
+      }
+    ],
+    "text": "+40% Attack Speed and +40% Damage."
+  },
+  {
+    "slot": "SluttyCannon",
+    "id": "void-battery",
+    "name": "Void Battery",
+    "stats": [
+      {
+        "stat": "CritChance",
+        "type": "Flat",
+        "value": 0.25
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      }
+    ],
+    "text": "+25% Critical Strike Chance and +30% Damage."
+  },
+  {
+    "slot": "TurboSocks",
+    "id": "wondertrap",
+    "name": "Wondertrap",
+    "stats": [
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.15
+      },
+      {
+        "stat": "Luck",
+        "type": "Flat",
+        "value": 0.05
+      }
+    ],
+    "text": "+15% Movement Speed and +5% Luck."
+  },
+  {
+    "slot": "ShatteredWisdom",
+    "id": "skyforth",
+    "name": "Skyforth",
+    "stats": [
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.45
+      },
+      {
+        "stat": "CritChance",
+        "type": "Flat",
+        "value": 0.175
+      }
+    ],
+    "text": "+45% Attack Speed and +17.5% Critical Strike Chance."
+  },
+  {
+    "slot": "EchoShard",
+    "id": "doryanis-catalyst",
+    "name": "Doryani's Catalyst",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.175
+      },
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.125
+      }
+    ],
+    "text": "+17.5% Damage and +12.5% Attack Speed."
+  },
+  {
+    "slot": "Backpack",
+    "id": "carcass-jack",
+    "name": "Carcass Jack",
+    "stats": [
+      {
+        "stat": "SizeMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      },
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.2
+      }
+    ],
+    "text": "+25% Area of Effect and +20% maximum Life."
+  },
+  {
+    "slot": "Clover",
+    "id": "perandus-blazon",
+    "name": "Perandus Blazon",
+    "stats": [
+      {
+        "stat": "Luck",
+        "type": "Flat",
+        "value": 0.1
+      },
+      {
+        "stat": "ChestPriceMultiplier",
+        "type": "Multiplication",
+        "value": 0.6
+      }
+    ],
+    "text": "+10% Luck and chests cost 40% less."
+  },
+  {
+    "slot": "Campfire",
+    "id": "the-covenant",
+    "name": "The Covenant",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.35
+      },
+      {
+        "stat": "HealthRegen",
+        "type": "Flat",
+        "value": 70
+      }
+    ],
+    "text": "+35% maximum Life and +70 Health Regeneration per minute."
+  },
+  {
+    "slot": "Rollerblades",
+    "id": "replica-dreamfeather",
+    "name": "Replica Dreamfeather",
+    "stats": [
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.45
+      },
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+45% Movement Speed and +25% Attack Speed."
+  },
+  {
+    "slot": "Skuleg",
+    "id": "araku-tiki",
+    "name": "Araku Tiki",
+    "stats": [
+      {
+        "stat": "HealthRegen",
+        "type": "Flat",
+        "value": 175
+      },
+      {
+        "stat": "MaxHealth",
+        "type": "Flat",
+        "value": 55
+      }
+    ],
+    "text": "+175 Health Regeneration per minute and +55 maximum Life."
+  },
+  {
+    "slot": "Scarf",
+    "id": "the-taming",
+    "name": "The Taming",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.25
+      },
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.25
+      },
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+25% Fire Damage, +25% Ice Damage and +25% Lightning Damage."
+  },
+  {
+    "slot": "Oats",
+    "id": "kaoms-sign",
+    "name": "Kaom's Sign",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Flat",
+        "value": 85
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 30
+      }
+    ],
+    "text": "+85 maximum Life and +30 Armour."
+  },
+  {
+    "slot": "CursedDoll",
+    "id": "asenaths-mark",
+    "name": "Asenath's Mark",
+    "stats": [
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.125
+      },
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.125
+      }
+    ],
+    "text": "+12.5% Attack Speed and +12.5% Evasion."
+  },
+  {
+    "slot": "EnergyCore",
+    "id": "watchers-eye",
+    "name": "Watcher's Eye",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.75
+      }
+    ],
+    "text": "+75% Damage."
+  },
+  {
+    "slot": "ElectricPlug",
+    "id": "lightning-coil",
+    "name": "Lightning Coil",
+    "stats": [
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.4
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 20
+      }
+    ],
+    "text": "+40% Lightning Damage and +20 Armour."
+  },
+  {
+    "slot": "SoulHarvester",
+    "id": "replica-headhunter",
+    "name": "Replica Headhunter",
+    "triggers": [
+      {
+        "on": "kill",
+        "effect": "explode",
+        "value": 0.8,
+        "radius": 5
+      }
+    ],
+    "text": "Slain enemies explode for 80% of the killing hit."
+  },
+  {
+    "slot": "Mirror",
+    "id": "mark-of-the-shaper",
+    "name": "Mark of the Shaper",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.45
+      }
+    ],
+    "text": "+45% Damage."
+  },
+  {
+    "slot": "JoesDagger",
+    "id": "nimis",
+    "name": "Nimis",
+    "stats": [
+      {
+        "stat": "ProjectileBounces",
+        "type": "Flat",
+        "value": 2
+      },
+      {
+        "stat": "ProjectileSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      }
+    ],
+    "text": "Projectiles pierce 2 enemies and +30% Projectile Speed."
+  },
+  {
+    "slot": "SpeedBoi",
+    "id": "voyage",
+    "name": "Voyage",
+    "stats": [
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.45
+      },
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.5
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+45% Movement Speed, +50% Evasion and +25% Damage."
+  },
+  {
+    "slot": "Gasmask",
+    "id": "the-pandemonius",
+    "name": "The Pandemonius",
+    "stats": [
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.6
+      },
+      {
+        "stat": "FreezeChance",
+        "type": "Flat",
+        "value": 0.6
+      }
+    ],
+    "text": "+60% Ice Damage and +60% Freeze Chance."
+  },
+  {
+    "slot": "HolyBook",
+    "id": "circle-of-anguish",
+    "name": "Circle of Anguish",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.65
+      },
+      {
+        "stat": "Luck",
+        "type": "Flat",
+        "value": 0.1
+      }
+    ],
+    "text": "+65% Damage and +10% Luck."
+  },
+  {
+    "slot": "BrassKnuckles",
+    "id": "carnage-heart",
+    "name": "Carnage Heart",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      }
+    ],
+    "text": "+30% Damage."
+  },
+  {
+    "slot": "IdleJuice",
+    "id": "tasalios-sign",
+    "name": "Tasalio's Sign",
+    "stats": [
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      },
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+25% Movement Speed and +25% Evasion."
+  },
+  {
+    "slot": "Borgar",
+    "id": "thousand-ribbons",
+    "name": "Thousand Ribbons",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.075
+      },
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.075
+      },
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.075
+      }
+    ],
+    "text": "+7.5% Fire Damage, +7.5% Ice Damage and +7.5% Lightning Damage."
+  },
+  {
+    "slot": "Medkit",
+    "id": "ashrend",
+    "name": "Ashrend",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.2
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 10
+      }
+    ],
+    "text": "+20% Fire Damage and +10 Armour."
+  },
+  {
+    "slot": "GamerGoggles",
+    "id": "precursors-emblem",
+    "name": "Precursor's Emblem",
+    "stats": [
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.35
+      },
+      {
+        "stat": "Evasion",
+        "type": "Addition",
+        "value": 0.35
+      }
+    ],
+    "text": "+35% Attack Speed and +35% Evasion."
+  },
+  {
+    "slot": "UnstableTransfusion",
+    "id": "pyre",
+    "name": "Pyre",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.35
+      },
+      {
+        "stat": "BurnChance",
+        "type": "Flat",
+        "value": 0.45
+      }
+    ],
+    "text": "+35% Fire Damage and +45% Burn Chance."
+  },
+  {
+    "slot": "CreditCardRed",
+    "id": "ungils-harmony",
+    "name": "Ungil's Harmony",
+    "stats": [
+      {
+        "stat": "CritChance",
+        "type": "Flat",
+        "value": 0.2
+      },
+      {
+        "stat": "CritDamage",
+        "type": "Flat",
+        "value": 0.5
+      }
+    ],
+    "text": "+20% Critical Strike Chance and +50% Critical Damage."
+  },
+  {
+    "slot": "BossBuster",
+    "id": "karui-ward",
+    "name": "Karui Ward",
+    "stats": [
+      {
+        "stat": "ProjectileSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.3
+      },
+      {
+        "stat": "MoveSpeedMultiplier",
+        "type": "Addition",
+        "value": 0.15
+      }
+    ],
+    "text": "+30% Projectile Speed and +15% Movement Speed."
+  },
+  {
+    "slot": "LeechingCrystal",
+    "id": "doedres-damning",
+    "name": "Doedre's Damning",
+    "stats": [
+      {
+        "stat": "Lifesteal",
+        "type": "Addition",
+        "value": 0.075
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+7.5% Lifesteal and +25% Damage."
+  },
+  {
+    "slot": "TacticalGlasses",
+    "id": "prismweave",
+    "name": "Prismweave",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.075
+      },
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.075
+      },
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.075
+      }
+    ],
+    "text": "+7.5% Fire Damage, +7.5% Ice Damage and +7.5% Lightning Damage."
+  },
+  {
+    "slot": "Cactus",
+    "id": "bramblejack",
+    "name": "Bramblejack",
+    "stats": [
+      {
+        "stat": "Thorns",
+        "type": "Flat",
+        "value": 40
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 60
+      }
+    ],
+    "text": "+40 Thorns and +60 Armour."
+  },
+  {
+    "slot": "IceCrystal",
+    "id": "hrimsorrow",
+    "name": "Hrimsorrow",
+    "stats": [
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.2
+      },
+      {
+        "stat": "FreezeChance",
+        "type": "Flat",
+        "value": 0.15
+      }
+    ],
+    "text": "+20% Ice Damage and +15% Freeze Chance."
+  },
+  {
+    "slot": "TimeBracelet",
+    "id": "perandus-signet",
+    "name": "Perandus Signet",
+    "stats": [
+      {
+        "stat": "XpIncreaseMultiplier",
+        "type": "Addition",
+        "value": 0.6
+      }
+    ],
+    "text": "+60% Experience gained."
+  },
+  {
+    "slot": "GloveLightning",
+    "id": "the-three-dragons",
+    "name": "The Three Dragons",
+    "stats": [
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.15
+      },
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.15
+      },
+      {
+        "stat": "IceDamage",
+        "type": "Addition",
+        "value": 0.15
+      }
+    ],
+    "text": "+15% Lightning Damage, +15% Fire Damage and +15% Ice Damage."
+  },
+  {
+    "slot": "GlovePoison",
+    "id": "maw-of-conquest",
+    "name": "Maw of Conquest",
+    "stats": [
+      {
+        "stat": "PoisonDamageMultiplier",
+        "type": "Addition",
+        "value": 0.65
+      }
+    ],
+    "triggers": [
+      {
+        "on": "hit",
+        "effect": "poison",
+        "chance": 0.75,
+        "seconds": 4
+      }
+    ],
+    "text": "+65% Poison Damage and 75% chance on hit to poison enemies for 4 s.",
+    "rarity": "epic"
+  },
+  {
+    "slot": "GloveBlood",
+    "id": "cowards-legacy",
+    "name": "Coward's Legacy",
+    "triggers": [
+      {
+        "on": "hit",
+        "effect": "curse",
+        "chance": 0.6000000000000001,
+        "value": 0.9,
+        "radius": 4
+      }
+    ],
+    "text": "60% chance on hit to curse nearby enemies for 90% of the hit.",
+    "rarity": "common"
+  },
+  {
+    "slot": "QuinsMask",
+    "id": "yoke-of-suffering",
+    "name": "Yoke of Suffering",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.45
+      }
+    ],
+    "text": "+45% Damage."
+  },
+  {
+    "slot": "OldMask",
+    "id": "aurseize",
+    "name": "Aurseize",
+    "stats": [
+      {
+        "stat": "GoldIncreaseMultiplier",
+        "type": "Addition",
+        "value": 0.55
+      },
+      {
+        "stat": "Luck",
+        "type": "Flat",
+        "value": 0.075
+      }
+    ],
+    "text": "+55% Gold and +7.5% Luck."
+  },
+  {
+    "slot": "Snek",
+    "id": "original-sin",
+    "name": "Original Sin",
+    "triggers": [
+      {
+        "on": "hit",
+        "effect": "poison",
+        "chance": 1.0,
+        "seconds": 5
+      }
+    ],
+    "text": "+35% Damage and 100% chance on hit to poison enemies for 5 s.",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.35
+      }
+    ]
+  },
+  {
+    "slot": "BobsLantern",
+    "id": "storm-secret",
+    "name": "Storm Secret",
+    "stats": [
+      {
+        "stat": "LightningDamage",
+        "type": "Addition",
+        "value": 0.4
+      },
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+40% Lightning Damage and +25% Attack Speed."
+  },
+  {
+    "slot": "Pumpkin",
+    "id": "mokous-embrace",
+    "name": "Mokou's Embrace",
+    "stats": [
+      {
+        "stat": "BurnChance",
+        "type": "Flat",
+        "value": 0.6
+      },
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 0.3
+      }
+    ],
+    "text": "+60% Burn Chance and +30% Fire Damage."
+  },
+  {
+    "slot": "WizardsHat",
+    "id": "apocalypse",
+    "name": "Apocalypse",
+    "stats": [
+      {
+        "stat": "FireDamage",
+        "type": "Addition",
+        "value": 1.1
+      },
+      {
+        "stat": "BurnChance",
+        "type": "Flat",
+        "value": 0.6
+      }
+    ],
+    "text": "+110% Fire Damage and +60% Burn Chance."
+  },
+  {
+    "slot": "Feathers",
+    "id": "wanderlust",
+    "name": "Wanderlust",
+    "stats": [
+      {
+        "stat": "PickupRange",
+        "type": "Multiplication",
+        "value": 2.0
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+100% Pickup Range and +25% Damage."
+  },
+  {
+    "slot": "GloveCurse",
+    "id": "goldrim",
+    "name": "Goldrim",
+    "triggers": [
+      {
+        "on": "hit",
+        "effect": "curse",
+        "chance": 0.55,
+        "value": 0.9,
+        "radius": 4
+      }
+    ],
+    "text": "55% chance on hit to curse nearby enemies for 90% of the hit.",
+    "rarity": "common"
+  },
+  {
+    "slot": "EagleClaw",
+    "id": "voidfletcher",
+    "name": "Voidfletcher",
+    "stats": [
+      {
+        "stat": "Projectiles",
+        "type": "Flat",
+        "value": 1
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ],
+    "text": "+1 Projectile Count and +25% Damage.",
+    "rarity": "legendary"
+  },
+  {
+    "slot": "DemonicSoul",
+    "id": "dying-sun",
+    "name": "Dying Sun",
+    "triggers": [
+      {
+        "on": "standstill",
+        "effect": "damageRamp",
+        "value": 1,
+        "seconds": 3
+      }
+    ],
+    "text": "+25% Damage and while standing still, damage ramps up to +100%.",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "slot": "ToxicBarrel",
+    "id": "the-embalmer",
+    "name": "The Embalmer",
+    "triggers": [
+      {
+        "on": "hit",
+        "effect": "poison",
+        "chance": 1.0,
+        "seconds": 4
+      }
+    ],
+    "text": "100% chance on hit to poison enemies for 4 s."
+  },
+  {
+    "slot": "GlovePower",
+    "id": "headhunter",
+    "name": "Headhunter",
+    "triggers": [
+      {
+        "on": "kill",
+        "effect": "explode",
+        "value": 1.0,
+        "radius": 3
+      }
+    ],
+    "text": "Slain enemies explode for 100% of the killing hit."
+  },
+  {
+    "slot": "Ghost",
+    "id": "tabula-rasa",
+    "name": "Tabula Rasa",
+    "stats": [
+      {
+        "stat": "Projectiles",
+        "type": "Flat",
+        "value": 2
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.1
+      }
+    ],
+    "text": "+2 Projectile Count and +10% Damage.",
+    "rarity": "legendary"
+  },
+  {
+    "slot": "GoldenRing",
+    "id": "mageblood",
+    "name": "Mageblood",
+    "stats": [
+      {
+        "stat": "AttackSpeed",
+        "type": "Addition",
+        "value": 0.6
+      },
+      {
+        "stat": "SizeMultiplier",
+        "type": "Addition",
+        "value": 0.5
+      }
+    ],
+    "text": "+60% Attack Speed and +50% Area of Effect."
+  },
+  {
+    "slot": "Pot",
+    "id": "kaoms-heart",
+    "name": "Kaom's Heart",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.8
+      },
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.2
+      }
+    ],
+    "text": "+80% maximum Life and +20% Damage."
+  },
+  {
+    "slot": "Anvil",
+    "id": "starforge",
+    "name": "Starforge",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.65
+      },
+      {
+        "stat": "CritChance",
+        "type": "Flat",
+        "value": 0.2
+      }
+    ],
+    "text": "+65% Damage and +20% Critical Strike Chance."
+  },
+  {
+    "slot": "BloodyCleaver",
+    "id": "atziris-disfavour",
+    "name": "Atziri's Disfavour",
+    "stats": [
+      {
+        "stat": "DamageMultiplier",
+        "type": "Addition",
+        "value": 0.5
+      },
+      {
+        "stat": "ProjectileBounces",
+        "type": "Flat",
+        "value": 1
+      }
+    ],
+    "text": "+50% Damage and projectiles pierce 1 enemy."
+  },
+  {
+    "slot": "GrandmasSecretTonic",
+    "id": "belly-of-the-beast",
+    "name": "Belly of the Beast",
+    "stats": [
+      {
+        "stat": "MaxHealth",
+        "type": "Multiplication",
+        "value": 1.55
+      },
+      {
+        "stat": "Armor",
+        "type": "Flat",
+        "value": 30
+      }
+    ],
+    "text": "+55% maximum Life and +30 Armour."
+  }
+]

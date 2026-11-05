@@ -1,0 +1,42 @@
+{
+  "name": "Wraeclast Conversion",
+  "id": "wraeclast.conversion",
+  "version": "0.9.213",
+  "megabonkBuild": "2023.2.22f1",
+  "unityVersion": "2023.2.22f1",
+  "loader": {
+    "name": "BepInEx",
+    "flavour": "IL2CPP x64",
+    "version": "6.0.0-be.791+b782da4",
+    "source": "https://builds.bepinex.dev/projects/bepinex_be/791",
+    "note": "Verified on a game copy: interop generated, 3 Harmony hooks applied."
+  },
+  "plugin": "BepInEx/plugins/Wraeclast/Wraeclast.dll",
+  "files": {
+    "loader": ["BepInEx", "dotnet", "winhttp.dll", "doorstop_config.ini", ".doorstop_version"],
+    "mod": ["BepInEx/plugins/Wraeclast"]
+  },
+  "gameData": {
+    "characters": 21,
+    "weapons": 30,
+    "items": 87,
+    "unlockables": 332,
+    "note": "Counts read from DataManager.Load at runtime on 2023.2.22f1; unsortedCharacterData is sorted alphabetically by display name, not by ECharacter order."
+  },
+  "classes": [
+    { "slot": "Megachad", "class": "Marauder", "source": "classes.json" },
+    { "slot": "Robinette", "class": "Ranger", "source": "classes.json" },
+    { "slot": "Cl4nk", "class": "Witch", "source": "classes.json" },
+    { "slot": "Athena", "class": "Templar", "source": "classes.json" },
+    { "slot": "Vlad", "class": "Shadow", "source": "classes.json" },
+    { "slot": "Noelle", "class": "Duelist", "source": "classes.json" },
+    { "slot": "Birdo", "class": "Scion", "source": "classes.json" }
+  ],
+  "assets": "BepInEx/plugins/Wraeclast/assets",
+  "distribution": {
+    "private": true,
+    "reason": "Contains Path of Exile and Megabonk derived assets. Do not publish a build."
+  }
+}
+
+

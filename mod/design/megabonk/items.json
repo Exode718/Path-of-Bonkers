@@ -1,0 +1,2438 @@
+[
+ {
+  "id": "Battery",
+  "slug": "battery",
+  "name": "Battery",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 7,
+  "eItemName": "Battery",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_battery",
+  "icon": {
+   "path": "megabonk/icons/items/battery.png",
+   "texture": "ItemBattery",
+   "pathId": 767
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8066
+  },
+  "nameSlug": "battery"
+ },
+ {
+  "id": "Borgar",
+  "slug": "borgar",
+  "name": "Borgar",
+  "description": "{value1} chance to spawn Borgar upon killing an enemy",
+  "descriptionFr": "{value1} chance de faire pop un Burger en tuant un ennemi",
+  "eItem": 58,
+  "eItemName": "Borgar",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/borgar.png",
+   "texture": "ItemBorgor",
+   "pathId": 1280
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8067
+  },
+  "nameSlug": "borgar"
+ },
+ {
+  "id": "Boss Buster",
+  "slug": "boss-buster",
+  "name": "Boss Buster",
+  "description": "{value1} more damage to Elites and Bosses",
+  "descriptionFr": "{value1} de dégâts en plus contre les Élites et Boss",
+  "eItem": 65,
+  "eItemName": "BossBuster",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_bossBuster",
+  "icon": {
+   "path": "megabonk/icons/items/boss-buster.png",
+   "texture": "ItemBossBuster",
+   "pathId": 609
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8068
+  },
+  "nameSlug": "boss-buster"
+ },
+ {
+  "id": "Cactus",
+  "slug": "cactus",
+  "name": "Cactus",
+  "description": "Shoots out spikes upon taking damage. Damage scales with {stat1}",
+  "descriptionFr": "Lance des pics si blessé. Dégâts selon {stat1}",
+  "eItem": 68,
+  "eItemName": "Cactus",
+  "price": 4.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_cactus",
+  "icon": {
+   "path": "megabonk/icons/items/cactus.png",
+   "texture": "ItemCactus",
+   "pathId": 1364
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8069
+  },
+  "nameSlug": "cactus"
+ },
+ {
+  "id": "Clover",
+  "slug": "clover",
+  "name": "Clover",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 35,
+  "eItemName": "Clover",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/clover.png",
+   "texture": "itemClover",
+   "pathId": 1144
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8070
+  },
+  "nameSlug": "clover"
+ },
+ {
+  "id": "Cursed Doll",
+  "slug": "cursed-doll",
+  "name": "Cursed Doll",
+  "description": "Curse an enemy, dealing {value1} of their Max HP every second.",
+  "descriptionFr": "Maudit un ennemi, infligeant {value1} de leurs PV max par seconde",
+  "eItem": 43,
+  "eItemName": "CursedDoll",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": -1,
+  "unlock": "a_cursedDoll",
+  "icon": {
+   "path": "megabonk/icons/items/cursed-doll.png",
+   "texture": "ItemCursedDoll",
+   "pathId": 1174
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8071
+  },
+  "nameSlug": "cursed-doll"
+ },
+ {
+  "id": "ForbiddenJuice",
+  "slug": "forbiddenjuice",
+  "name": "Forbidden Juice",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 9,
+  "eItemName": "ForbiddenJuice",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_forbiddenJuice",
+  "icon": {
+   "path": "megabonk/icons/items/forbiddenjuice.png",
+   "texture": "ItemShadowJuice",
+   "pathId": 806
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8072
+  },
+  "nameSlug": "forbidden-juice"
+ },
+ {
+  "id": "Ghost",
+  "slug": "ghost",
+  "name": "Ghost",
+  "description": "Using an interactable summons ghosts",
+  "descriptionFr": "Utiliser un interactif invoque des fantômes",
+  "eItem": 28,
+  "eItemName": "Ghost",
+  "price": 4.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_ghost",
+  "icon": {
+   "path": "megabonk/icons/items/ghost.png",
+   "texture": "ItemGhost",
+   "pathId": 878
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8073
+  },
+  "nameSlug": "ghost"
+ },
+ {
+  "id": "Golden Glove",
+  "slug": "golden-glove",
+  "name": "Golden Glove",
+  "description": "Earn {value1} more gold from killing enemies",
+  "descriptionFr": "Gagne {value1} d'or en plus en tuant des ennemis",
+  "eItem": 23,
+  "eItemName": "GoldenGlove",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/golden-glove.png",
+   "texture": "ItemGoldenGlove",
+   "pathId": 528
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8074
+  },
+  "nameSlug": "golden-glove"
+ },
+ {
+  "id": "GymSauce",
+  "slug": "gymsauce",
+  "name": "Gym Sauce",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 6,
+  "eItemName": "GymSauce",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/gymsauce.png",
+   "texture": "ItemGymSauce",
+   "pathId": 940
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8075
+  },
+  "nameSlug": "gym-sauce"
+ },
+ {
+  "id": "IceCrystal",
+  "slug": "icecrystal",
+  "name": "Ice Crystal",
+  "description": "{value1} chance to freeze enemies upon hitting them.",
+  "descriptionFr": "{value1} chance de geler les ennemis quand tu les cognes.",
+  "eItem": 70,
+  "eItemName": "IceCrystal",
+  "price": 4.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_iceCrystal",
+  "icon": {
+   "path": "megabonk/icons/items/icecrystal.png",
+   "texture": "ItemIceCrystal",
+   "pathId": 1091
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8076
+  },
+  "nameSlug": "ice-crystal"
+ },
+ {
+  "id": "Key",
+  "slug": "key",
+  "name": "Key",
+  "description": "{value1} chance to open chests for free",
+  "descriptionFr": "{value1} chance d'ouvrir les coffres gratos",
+  "eItem": 0,
+  "eItemName": "Key",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_key",
+  "icon": {
+   "path": "megabonk/icons/items/key.png",
+   "texture": "ItemKey",
+   "pathId": 1117
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8077
+  },
+  "nameSlug": "key"
+ },
+ {
+  "id": "Medkit",
+  "slug": "medkit",
+  "name": "Medkit",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 59,
+  "eItemName": "Medkit",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/medkit.png",
+   "texture": "ItemMedkit",
+   "pathId": 1062
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8078
+  },
+  "nameSlug": "medkit"
+ },
+ {
+  "id": "Moldy Cheese",
+  "slug": "moldy-cheese",
+  "name": "Moldy Cheese",
+  "description": "{value1} chance to poison enemies on hit. Moldy Cheese my beloved <3 ",
+  "descriptionFr": "{value1} chance d'empoisonner les ennemis lors d'un coup. Fromage Moisi, mon amour <3",
+  "eItem": 13,
+  "eItemName": "MoldyCheese",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/moldy-cheese.png",
+   "texture": "ItemMoldyCheese",
+   "pathId": 1005
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8079
+  },
+  "nameSlug": "moldy-cheese"
+ },
+ {
+  "id": "Oats",
+  "slug": "oats",
+  "name": "Oats",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 42,
+  "eItemName": "Oats",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/oats.png",
+   "texture": "ItemOats",
+   "pathId": 874
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8080
+  },
+  "nameSlug": "oats"
+ },
+ {
+  "id": "OldMask",
+  "slug": "oldmask",
+  "name": "Old Mask",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 82,
+  "eItemName": "OldMask",
+  "price": 4.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_oldMask",
+  "icon": {
+   "path": "megabonk/icons/items/oldmask.png",
+   "texture": "ItemOldMask",
+   "pathId": 972
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8081
+  },
+  "nameSlug": "old-mask"
+ },
+ {
+  "id": "Skuleg",
+  "slug": "skuleg",
+  "name": "Skuleg",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 38,
+  "eItemName": "Skuleg",
+  "price": 4.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_skuleg",
+  "icon": {
+   "path": "megabonk/icons/items/skuleg.png",
+   "texture": "ItemSkuleg",
+   "pathId": 975
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8082
+  },
+  "nameSlug": "skuleg"
+ },
+ {
+  "id": "Slippery Ring",
+  "slug": "slippery-ring",
+  "name": "Slippery Ring",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 4,
+  "eItemName": "SlipperyRing",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/slippery-ring.png",
+   "texture": "ItemSlipperyRing",
+   "pathId": 1151
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8083
+  },
+  "nameSlug": "slippery-ring"
+ },
+ {
+  "id": "Tactical Glasses",
+  "slug": "tactical-glasses",
+  "name": "Tactical Glasses",
+  "description": "{value1} more damage to enemies above 90% HP",
+  "descriptionFr": "{value1} de dégâts en plus aux ennemis avec plus de 90% de PV",
+  "eItem": 67,
+  "eItemName": "TacticalGlasses",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_tacticalGlasses",
+  "icon": {
+   "path": "megabonk/icons/items/tactical-glasses.png",
+   "texture": "ItemTacticalGoggles",
+   "pathId": 652
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8084
+  },
+  "nameSlug": "tactical-glasses"
+ },
+ {
+  "id": "TimeBracelet",
+  "slug": "timebracelet",
+  "name": "Time Bracelet",
+  "description": "{value1} {stat1}. Definitely not just a normal watch.",
+  "descriptionFr": "{value1} {stat1}. Mais non, c'est pas juste une montre normale !",
+  "eItem": 71,
+  "eItemName": "TimeBracelet",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/timebracelet.png",
+   "texture": "ItemTimeBracelet",
+   "pathId": 517
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8085
+  },
+  "nameSlug": "time-bracelet"
+ },
+ {
+  "id": "Turbo Socks",
+  "slug": "turbo-socks",
+  "name": "Turbo Socks",
+  "description": "Increase {stat1} by {value1}",
+  "descriptionFr": "Augmente {stat1} de {value1}",
+  "eItem": 30,
+  "eItemName": "TurboSocks",
+  "price": 3.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_turboSocks",
+  "icon": {
+   "path": "megabonk/icons/items/turbo-socks.png",
+   "texture": "ItemTurboSocks",
+   "pathId": 843
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8086
+  },
+  "nameSlug": "turbo-socks"
+ },
+ {
+  "id": "UnstableTransfusion",
+  "slug": "unstabletransfusion",
+  "name": "Unstable Transfusion",
+  "description": "{value1} chance to apply a stack of {bloodmark} when hitting an enemy.",
+  "descriptionFr": "{value1} chance d'appliquer une pile de {bloodmark} en touchant un ennemi.",
+  "eItem": 61,
+  "eItemName": "UnstableTransfusion",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/unstabletransfusion.png",
+   "texture": "Unstable Transfusion",
+   "pathId": 578
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8087
+  },
+  "nameSlug": "unstable-transfusion"
+ },
+ {
+  "id": "Wrench",
+  "slug": "wrench",
+  "name": "Wrench",
+  "description": "{charge_shrine}: Charge {value1}% faster and get {value2} increased rewards.",
+  "descriptionFr": "{charge_shrine}: Charge {value1}% plus vite et empoche {value2} de récompenses en plus.",
+  "eItem": 77,
+  "eItemName": "Wrench",
+  "price": 0.0,
+  "rarity": 0,
+  "rarityName": "Common",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/wrench.png",
+   "texture": "ItemWrench",
+   "pathId": 663
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8088
+  },
+  "nameSlug": "wrench"
+ },
+ {
+  "id": "Backpack",
+  "slug": "backpack",
+  "name": "Backpack",
+  "description": "{value1} {stat1} for all Weapons",
+  "descriptionFr": "{value1} {stat1} pour toutes les armes",
+  "eItem": 34,
+  "eItemName": "Backpack",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/backpack.png",
+   "texture": "ItemBackpack",
+   "pathId": 1377
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8089
+  },
+  "nameSlug": "backpack"
+ },
+ {
+  "id": "Beacon",
+  "slug": "beacon",
+  "name": "Beacon",
+  "description": "Charging a {charge_shrine} will turn it into a healing zone. Also spawn {value} extra {charge_shrine} for future stages.",
+  "descriptionFr": "Charger un {charge_shrine} le transforme en zone de soin. Fais aussi pop {value} {charge_shrine} en plus pour les prochains niveaux.",
+  "eItem": 78,
+  "eItemName": "Beacon",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/beacon.png",
+   "texture": "Itembeacon",
+   "pathId": 496
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8090
+  },
+  "nameSlug": "beacon"
+ },
+ {
+  "id": "Beer",
+  "slug": "beer",
+  "name": "Beer",
+  "description": "{value1} {stat1} at the cost of {value2} {stat2}.",
+  "descriptionFr": "{value1} {stat1} mais en perdant {value2} {stat2}.",
+  "eItem": 1,
+  "eItemName": "Beer",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/beer.png",
+   "texture": "ItemBeer",
+   "pathId": 1008
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8091
+  },
+  "nameSlug": "beer"
+ },
+ {
+  "id": "BrassKnuckles",
+  "slug": "brassknuckles",
+  "name": "Brass Knuckles",
+  "description": "Deal {value1} more damage to nearby enemies.",
+  "descriptionFr": "Frappez les ennemis proches avec {value1} dégâts en plus.",
+  "eItem": 55,
+  "eItemName": "BrassKnuckles",
+  "price": 5.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_brassKnuckles",
+  "icon": {
+   "path": "megabonk/icons/items/brassknuckles.png",
+   "texture": "ItemBrassKnuckle",
+   "pathId": 500
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8092
+  },
+  "nameSlug": "brass-knuckles"
+ },
+ {
+  "id": "Campfire",
+  "slug": "campfire",
+  "name": "Campfire",
+  "description": "Standing still heals you",
+  "descriptionFr": "Rester immobile te soigne",
+  "eItem": 36,
+  "eItemName": "Campfire",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/campfire.png",
+   "texture": "ItemCampfire",
+   "pathId": 892
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8093
+  },
+  "nameSlug": "campfire"
+ },
+ {
+  "id": "Cowards Cloak",
+  "slug": "cowards-cloak",
+  "name": "Coward's cloak",
+  "description": "Boost {stat1} upon taking damage. Also gain {value1} {stat1}.",
+  "descriptionFr": "Augmente {stat1} en prenant des dégâts. Gagne aussi {value1} {stat1}.",
+  "eItem": 5,
+  "eItemName": "CowardsCloak",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/cowards-cloak.png",
+   "texture": "ItemSpeedyCloak",
+   "pathId": 743
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8094
+  },
+  "nameSlug": "coward-s-cloak"
+ },
+ {
+  "id": "CreditCardRed",
+  "slug": "creditcardred",
+  "name": "Credit Card (Red)",
+  "description": "Increase {stat1} by {value1} when opening a chest.",
+  "descriptionFr": "Augmente {stat1} de {value1} à l’ouverture d’un coffre.",
+  "eItem": 63,
+  "eItemName": "CreditCardRed",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/creditcardred.png",
+   "texture": "ItemCreditCardRed",
+   "pathId": 515
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8095
+  },
+  "nameSlug": "credit-card-red"
+ },
+ {
+  "id": "Demon Blade",
+  "slug": "demon-blade",
+  "name": "Demonic Blade",
+  "description": "Crits have a {value1} chance to heal you",
+  "descriptionFr": "Les crits ont {value1} chance de te soigner",
+  "eItem": 10,
+  "eItemName": "DemonBlade",
+  "price": 5.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_demonicBlade",
+  "icon": {
+   "path": "megabonk/icons/items/demon-blade.png",
+   "texture": "ItemDemonBlade",
+   "pathId": 1289
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8096
+  },
+  "nameSlug": "demonic-blade"
+ },
+ {
+  "id": "Demonic Blood",
+  "slug": "demonic-blood",
+  "name": "Demonic Blood",
+  "description": "Increase {stat1} by {value1} per kill (Max {value2} stacks)",
+  "descriptionFr": "Augmente {stat1} de {value1} par kill (Max {value2} cumuls)",
+  "eItem": 19,
+  "eItemName": "DemonicBlood",
+  "price": 5.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_demonicBlood",
+  "icon": {
+   "path": "megabonk/icons/items/demonic-blood.png",
+   "texture": "ItemDemonBlood",
+   "pathId": 1307
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8097
+  },
+  "nameSlug": "demonic-blood"
+ },
+ {
+  "id": "Echo Shard",
+  "slug": "echo-shard",
+  "name": "Echo Shard",
+  "description": "{value1} chance to spawn an extra XP shard when killing an enemy",
+  "descriptionFr": "{value1} chance de faire apparaître un éclat d'XP supplémentaire en tuant un ennemi",
+  "eItem": 32,
+  "eItemName": "EchoShard",
+  "price": 5.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_echoShard",
+  "icon": {
+   "path": "megabonk/icons/items/echo-shard.png",
+   "texture": "ItemEchoShard",
+   "pathId": 554
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8098
+  },
+  "nameSlug": "echo-shard"
+ },
+ {
+  "id": "Electric Plug",
+  "slug": "electric-plug",
+  "name": "Electric Plug",
+  "description": "Upon taking damage, send out an electric shock to nearby enemies.",
+  "descriptionFr": "En prenant des dégâts, envoie un choc électrique aux ennemis proches.",
+  "eItem": 45,
+  "eItemName": "ElectricPlug",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/electric-plug.png",
+   "texture": "ItemElectricPlug",
+   "pathId": 1370
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8099
+  },
+  "nameSlug": "electric-plug"
+ },
+ {
+  "id": "Flappy Feathers",
+  "slug": "flappy-feathers",
+  "name": "Feathers",
+  "description": "Jump higher and further. Also gain +1 {stat1}",
+  "descriptionFr": "Saute plus haut et plus loin. Gagne aussi +1 {stat1}.",
+  "eItem": 27,
+  "eItemName": "Feathers",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/flappy-feathers.png",
+   "texture": "ItemFeathers",
+   "pathId": 569
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8100
+  },
+  "nameSlug": "feathers"
+ },
+ {
+  "id": "Glove Lightning",
+  "slug": "glove-lightning",
+  "name": "Thunder Mitts",
+  "description": "Upon hitting an enemy, clap their cheeks so hard it generates a lightning strike. {time_seconds} cooldown.",
+  "descriptionFr": "Quand tu frappes un ennemi, claque-lui les joues si fort que ça déclenche un éclair. Recharge de {time_seconds} secondes.",
+  "eItem": 72,
+  "eItemName": "GloveLightning",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/glove-lightning.png",
+   "texture": "ItemGlovesLightning",
+   "pathId": 1043
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8101
+  },
+  "nameSlug": "thunder-mitts"
+ },
+ {
+  "id": "Glove Poison",
+  "slug": "glove-poison",
+  "name": "Moldy Gloves",
+  "description": "Create a moldy poison cloud upon hittin an enemy. The gloves are covered in a moist, moldy and slimy texture.",
+  "descriptionFr": "Crée un nuage toxique moisi en touchant un ennemi. Les gants sont recouverts d'une texture humide, moisie et visqueuse.",
+  "eItem": 73,
+  "eItemName": "GlovePoison",
+  "price": 5.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_poisonGloves",
+  "icon": {
+   "path": "megabonk/icons/items/glove-poison.png",
+   "texture": "ItemGlovesPoison",
+   "pathId": 606
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8102
+  },
+  "nameSlug": "moldy-gloves"
+ },
+ {
+  "id": "Golden Shield",
+  "slug": "golden-shield",
+  "name": "Golden Shield",
+  "description": "Get extra gold when taking damage",
+  "descriptionFr": "Gagne de l'or supplémentaire en prenant des dégâts",
+  "eItem": 24,
+  "eItemName": "GoldenShield",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/golden-shield.png",
+   "texture": "ItemGoldenShield",
+   "pathId": 1070
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8103
+  },
+  "nameSlug": "golden-shield"
+ },
+ {
+  "id": "Golden Sneakers",
+  "slug": "golden-sneakers",
+  "name": "Golden Sneakers",
+  "description": "Earn money by moving around",
+  "descriptionFr": "Gagne de l'argent en te déplaçant",
+  "eItem": 14,
+  "eItemName": "GoldenSneakers",
+  "price": 5.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_goldenSneakers",
+  "icon": {
+   "path": "megabonk/icons/items/golden-sneakers.png",
+   "texture": "ItemGoldenSneakers",
+   "pathId": 1017
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8104
+  },
+  "nameSlug": "golden-sneakers"
+ },
+ {
+  "id": "IdleJuice",
+  "slug": "idlejuice",
+  "name": "Idle Juice",
+  "description": "The longer you stand still, the more damage you do. Max {value1} damage.",
+  "descriptionFr": "Plus tu restes immobile, plus tu fais de dégâts. Max {value1} dégâts.",
+  "eItem": 56,
+  "eItemName": "IdleJuice",
+  "price": 6.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_idleJuice",
+  "icon": {
+   "path": "megabonk/icons/items/idlejuice.png",
+   "texture": "IdleJuice",
+   "pathId": 1125
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8105
+  },
+  "nameSlug": "idle-juice"
+ },
+ {
+  "id": "Kevin",
+  "slug": "kevin",
+  "name": "Kevin",
+  "description": "Kevin hates you. {value1} chance that Kevin will punch you whenever you hit an enemy. Kevin cannot kill you, but he really wants to.",
+  "descriptionFr": "Kevin te déteste. {value1} chance que Kevin te colle une baffe à chaque fois que tu touches un ennemi. Kevin ne peut pas te tuer, mais il en a bien envie.",
+  "eItem": 57,
+  "eItemName": "Kevin",
+  "price": 8.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_kevin",
+  "icon": {
+   "path": "megabonk/icons/items/kevin.png",
+   "texture": "Kevin",
+   "pathId": 1216
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8106
+  },
+  "nameSlug": "kevin"
+ },
+ {
+  "id": "Leeching Crystal",
+  "slug": "leeching-crystal",
+  "name": "Leeching Crystal",
+  "description": "{value1} {stat1} at the cost of {value2} {stat2}.",
+  "descriptionFr": "{value1} {stat1} mais en perdant {value2} {stat2}.",
+  "eItem": 66,
+  "eItemName": "LeechingCrystal",
+  "price": 7.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_leechingCrystal",
+  "icon": {
+   "path": "megabonk/icons/items/leeching-crystal.png",
+   "texture": "ItemLeechingCrystal",
+   "pathId": 487
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8107
+  },
+  "nameSlug": "leeching-crystal"
+ },
+ {
+  "id": "PhantomShroud",
+  "slug": "phantomshroud",
+  "name": "Phantom Shroud",
+  "description": "After evading, deal {value1} damage next attack, and temporarily increase {stat1} and {stat2}.",
+  "descriptionFr": "Après esquive, inflige {value1} dégâts lors de la prochaine attaque et augmente temporairement {stat1} et {stat2}.",
+  "eItem": 8,
+  "eItemName": "PhantomShroud",
+  "price": 0.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/phantomshroud.png",
+   "texture": "ItemPhantomShroud",
+   "pathId": 1222
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8108
+  },
+  "nameSlug": "phantom-shroud"
+ },
+ {
+  "id": "Pumpkin",
+  "slug": "pumpkin",
+  "name": "Pumpkin",
+  "description": "Spawn {value} extra pots for future stages, and increase their reward by {value2}.",
+  "descriptionFr": "Fait apparaître {value} pots supplémentaires pour les prochaines phases et augmente leur récompense de {value2}.",
+  "eItem": 86,
+  "eItemName": "Pumpkin",
+  "price": 9.0,
+  "rarity": 1,
+  "rarityName": "Rare",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_pumpkin",
+  "icon": {
+   "path": "megabonk/icons/items/pumpkin.png",
+   "texture": "ItemPumpkin",
+   "pathId": 749
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8109
+  },
+  "nameSlug": "pumpkin"
+ },
+ {
+  "id": "Beefy Ring",
+  "slug": "beefy-ring",
+  "name": "Beefy Ring",
+  "description": "Increase {stat1} by {value1} per {value2} {stat2}",
+  "descriptionFr": "Augmente {stat1} de {value1} par {value2} {stat2}",
+  "eItem": 21,
+  "eItemName": "BeefyRing",
+  "price": 0.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/beefy-ring.png",
+   "texture": "ItemBeefyRing",
+   "pathId": 1279
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8110
+  },
+  "nameSlug": "beefy-ring"
+ },
+ {
+  "id": "Bob Dead",
+  "slug": "bob-dead",
+  "name": "Bob (Dead)",
+  "description": "For every {value1} units moved, summon Bob (he's dead)",
+  "descriptionFr": "Pour chaque {value1} unités parcourues, invoque Bob (il est mort)",
+  "eItem": 46,
+  "eItemName": "BobDead",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_bob",
+  "icon": {
+   "path": "megabonk/icons/items/bob-dead.png",
+   "texture": "ItemBobDead",
+   "pathId": 804
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8111
+  },
+  "nameSlug": "bob-dead"
+ },
+ {
+  "id": "Bobs Lantern",
+  "slug": "bobs-lantern",
+  "name": "Bob's Light",
+  "description": "A sphere of light explodes every {value1}s, killing all nearby enemies. Stacks reduce cooldown by {value2}s and increases radius by {value3}m.",
+  "descriptionFr": "Une sphère de lumière explose toutes les {value1}s et tue tous les ennemis proches. Les cumuls réduisent le cooldown de {value2}s et augmentent le rayon de {value3}m.",
+  "eItem": 85,
+  "eItemName": "BobsLantern",
+  "price": 9.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_bobsLantern",
+  "icon": {
+   "path": "megabonk/icons/items/bobs-lantern.png",
+   "texture": "ItemBobsLantern",
+   "pathId": 1178
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8112
+  },
+  "nameSlug": "bob-s-light"
+ },
+ {
+  "id": "CreditCardGreen",
+  "slug": "creditcardgreen",
+  "name": "Credit Card (Green)",
+  "description": "Increase {stat1} by {value1} when opening a chest. Also increase {stat2} by {value2}.",
+  "descriptionFr": "Augmente {stat1} de {value1} à l’ouverture d’un coffre. Augmente aussi {stat2} de {value2}.",
+  "eItem": 64,
+  "eItemName": "CreditCardGreen",
+  "price": 0.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/creditcardgreen.png",
+   "texture": "ItemCreditCardGreen",
+   "pathId": 697
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8113
+  },
+  "nameSlug": "credit-card-green"
+ },
+ {
+  "id": "Demonic Soul",
+  "slug": "demonic-soul",
+  "name": "Demonic Soul",
+  "description": "Increase {stat1} by {value1} per kill (max {value2})",
+  "descriptionFr": "Augmente {stat1} de {value1} par ennemi abattu (max {value2})",
+  "eItem": 20,
+  "eItemName": "DemonicSoul",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_demonicSoul",
+  "icon": {
+   "path": "megabonk/icons/items/demonic-soul.png",
+   "texture": "ItemDemonSoul",
+   "pathId": 1088
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8114
+  },
+  "nameSlug": "demonic-soul"
+ },
+ {
+  "id": "Eagle Claw",
+  "slug": "eagle-claw",
+  "name": "Eagle Claw",
+  "description": "Deal {value1} more {stat1} to airborne enemies. {value2} chance to knock enemy into the air.",
+  "descriptionFr": "Inflige {value1} {stat1} aux ennemis en l'air. {value2} chance de faire voler un ennemi dans les airs.",
+  "eItem": 39,
+  "eItemName": "EagleClaw",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_eagleClaw",
+  "icon": {
+   "path": "megabonk/icons/items/eagle-claw.png",
+   "texture": "ItemEagleClaw",
+   "pathId": 627
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8115
+  },
+  "nameSlug": "eagle-claw"
+ },
+ {
+  "id": "Gamer Goggles",
+  "slug": "gamer-goggles",
+  "name": "Gamer Goggles",
+  "description": "Increase {stat1} the lower your HP is. chat im locking in",
+  "descriptionFr": "Augmente {stat1} quand tes PV sont bas. chat je lock-in",
+  "eItem": 60,
+  "eItemName": "GamerGoggles",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_gamerGoggles",
+  "icon": {
+   "path": "megabonk/icons/items/gamer-goggles.png",
+   "texture": "GamerLens",
+   "pathId": 1359
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8116
+  },
+  "nameSlug": "gamer-goggles"
+ },
+ {
+  "id": "Gas Mask",
+  "slug": "gas-mask",
+  "name": "Gas Mask",
+  "description": "Gain {stat1} and {stat2} for every enemy infected with poison",
+  "descriptionFr": "Obtiens {stat1} et {stat2} pour chaque ennemi empoisonné",
+  "eItem": 52,
+  "eItemName": "Gasmask",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_gasMask",
+  "icon": {
+   "path": "megabonk/icons/items/gas-mask.png",
+   "texture": "Gasmask",
+   "pathId": 508
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8117
+  },
+  "nameSlug": "gas-mask"
+ },
+ {
+  "id": "Gloves Bloody",
+  "slug": "gloves-bloody",
+  "name": "Slurp Gloves",
+  "description": "Cast blood magic upon hitting an enemy, damaging nearby enemies and healing you for {value}. {time_seconds} cooldown.",
+  "descriptionFr": "Lance une magie de sang en frappant un ennemi, infligeant des dégâts aux ennemis proches et te soignant de {value}. Recharge de {time_seconds}.",
+  "eItem": 74,
+  "eItemName": "GloveBlood",
+  "price": 0.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/gloves-bloody.png",
+   "texture": "ItemGlovesBloody",
+   "pathId": 647
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8118
+  },
+  "nameSlug": "slurp-gloves"
+ },
+ {
+  "id": "Gloves Cursed",
+  "slug": "gloves-cursed",
+  "name": "Cursed Grabbies",
+  "description": "{value1} {stat1}, {value2} {stat2}. {chance} to cast cursed magic upon hitting an enemy, damaging nearby enemies.",
+  "descriptionFr": "{value1} {stat1}, {value2} {stat2}. {chance} de lancer de la magie maudite en frappant un ennemi, endommageant les ennemis à proximité.",
+  "eItem": 75,
+  "eItemName": "GloveCurse",
+  "price": 8.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_cursedGloves",
+  "icon": {
+   "path": "megabonk/icons/items/gloves-cursed.png",
+   "texture": "ItemGlovesCursed",
+   "pathId": 842
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8119
+  },
+  "nameSlug": "cursed-grabbies"
+ },
+ {
+  "id": "Grandma's Secret Tonic",
+  "slug": "grandma-s-secret-tonic",
+  "name": "Grandma's Secret Tonic",
+  "description": "Crits have a {value1} chance to explode and damage nearby enemies for {value2} damage",
+  "descriptionFr": "Les critiques ont {value1} de chance d'exploser et de blesser les ennemis à proximité pour {value2} dégâts",
+  "eItem": 11,
+  "eItemName": "GrandmasSecretTonic",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_grandmasTonic",
+  "icon": {
+   "path": "megabonk/icons/items/grandma-s-secret-tonic.png",
+   "texture": "GrandmasSecretTonic",
+   "pathId": 1171
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8120
+  },
+  "nameSlug": "grandma-s-secret-tonic"
+ },
+ {
+  "id": "Mirror",
+  "slug": "mirror",
+  "name": "Mirror",
+  "description": "Reflect any incoming damage back to the attacker, and gain a short invulnerability.",
+  "descriptionFr": "Renvoie tous les dégâts reçus à l'attaquant, et gagne une invulnérabilité temporaire.",
+  "eItem": 48,
+  "eItemName": "Mirror",
+  "price": 0.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/mirror.png",
+   "texture": "ItemMirror",
+   "pathId": 821
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8121
+  },
+  "nameSlug": "mirror"
+ },
+ {
+  "id": "Quins Mask",
+  "slug": "quins-mask",
+  "name": "Quin's Mask",
+  "description": "Thorns damage has a {value1} chance to explode and damage nearby enemies",
+  "descriptionFr": "Les dégâts d'épines ont une chance de {value1} d'exploser et de toucher les ennemis proches",
+  "eItem": 80,
+  "eItemName": "QuinsMask",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_quinsMask",
+  "icon": {
+   "path": "megabonk/icons/items/quins-mask.png",
+   "texture": "ItemQuinsMask",
+   "pathId": 1262
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8122
+  },
+  "nameSlug": "quin-s-mask"
+ },
+ {
+  "id": "Scarf",
+  "slug": "scarf",
+  "name": "Scarf",
+  "description": "Deal {value1} more {stat1} while airborne",
+  "descriptionFr": "Inflige {value1} de {stat1} en plus en l'air",
+  "eItem": 40,
+  "eItemName": "Scarf",
+  "price": 0.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/scarf.png",
+   "texture": "ItemScarf",
+   "pathId": 690
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8123
+  },
+  "nameSlug": "scarf"
+ },
+ {
+  "id": "Shattered Knowledge",
+  "slug": "shattered-knowledge",
+  "name": "Shattered Knowledge",
+  "description": "XP shards now slice through enemies, dealing damage as they pass. Knowledge really hurts.",
+  "descriptionFr": "Les fragments d'XP tranchent les ennemis, causant des dégâts en passant. Le savoir, ça fait mal.",
+  "eItem": 31,
+  "eItemName": "ShatteredWisdom",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_shatteredKnowledge",
+  "icon": {
+   "path": "megabonk/icons/items/shattered-knowledge.png",
+   "texture": "ItemShatteredWisdom",
+   "pathId": 952
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8124
+  },
+  "nameSlug": "shattered-knowledge"
+ },
+ {
+  "id": "Slutty Cannon",
+  "slug": "slutty-cannon",
+  "name": "Slutty Cannon",
+  "description": "{value1} chance to spawn missiles upon killing an enemy",
+  "descriptionFr": "{value1} de chance de lancer des missiles en tuant un ennemi",
+  "eItem": 29,
+  "eItemName": "SluttyCannon",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_sluttyCannon",
+  "icon": {
+   "path": "megabonk/icons/items/slutty-cannon.png",
+   "texture": "ItemSluttyCannon",
+   "pathId": 1152
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8125
+  },
+  "nameSlug": "slutty-cannon"
+ },
+ {
+  "id": "Spiky Shield",
+  "slug": "spiky-shield",
+  "name": "Spiky Shield",
+  "description": "Gain {value1} {stat1} for every {value2} {stat2}. Also gain {value3} {stat2}.",
+  "descriptionFr": "Obtiens {value1} {stat1} pour chaque {value2} {stat2}. Obtiens aussi {value3} {stat2}.",
+  "eItem": 2,
+  "eItemName": "SpikyShield",
+  "price": 0.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/spiky-shield.png",
+   "texture": "ItemSpikyShieldf",
+   "pathId": 1311
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8126
+  },
+  "nameSlug": "spiky-shield"
+ },
+ {
+  "id": "ToxicBarrel",
+  "slug": "toxicbarrel",
+  "name": "Toxic Barrel",
+  "description": "Release toxic waste upon taking damage, poisoning all nearby enemies",
+  "descriptionFr": "Libère des déchets toxiques en subissant des dégâts, empoisonnant tous les ennemis proches",
+  "eItem": 53,
+  "eItemName": "ToxicBarrel",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_toxicBarrel",
+  "icon": {
+   "path": "megabonk/icons/items/toxicbarrel.png",
+   "texture": "ToxicBarrel",
+   "pathId": 927
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8127
+  },
+  "nameSlug": "toxic-barrel"
+ },
+ {
+  "id": "Turbo Skates",
+  "slug": "turbo-skates",
+  "name": "Turbo Skates",
+  "description": "The faster you move, the more {stat1} you gain. Max {value1} per stack.",
+  "descriptionFr": "Plus tu bouges vite, plus tu gagnes de {stat1}. Max {value1} par pile.",
+  "eItem": 37,
+  "eItemName": "Rollerblades",
+  "price": 7.0,
+  "rarity": 2,
+  "rarityName": "Epic",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_turboSkates",
+  "icon": {
+   "path": "megabonk/icons/items/turbo-skates.png",
+   "texture": "ItemRollerblades",
+   "pathId": 1247
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8128
+  },
+  "nameSlug": "turbo-skates"
+ },
+ {
+  "id": "Anvil",
+  "slug": "anvil",
+  "name": "Anvil",
+  "description": "Weapon Upgrades can now have +1 stats",
+  "descriptionFr": "Les améliorations d'arme peuvent maintenant avoir +1 en stats",
+  "eItem": 41,
+  "eItemName": "Anvil",
+  "price": 12.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 1,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_anvil",
+  "icon": {
+   "path": "megabonk/icons/items/anvil.png",
+   "texture": "ItemAnvil",
+   "pathId": 581
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8129
+  },
+  "nameSlug": "anvil"
+ },
+ {
+  "id": "Bloody Cleaver",
+  "slug": "bloody-cleaver",
+  "name": "Bloody Cleaver",
+  "description": "{stat1} now triggers {bloodmark} stacks. Also gain {value1} chance to apply {bloodmark}",
+  "descriptionFr": "{stat1} déclenche maintenant des stacks de {bloodmark}. Vous avez aussi {value1} de chances d'appliquer {bloodmark}",
+  "eItem": 62,
+  "eItemName": "BloodyCleaver",
+  "price": 15.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_bloodyCleaver",
+  "icon": {
+   "path": "megabonk/icons/items/bloody-cleaver.png",
+   "texture": "Bloody Cleaver",
+   "pathId": 548
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8130
+  },
+  "nameSlug": "bloody-cleaver"
+ },
+ {
+  "id": "Bonker",
+  "slug": "bonker",
+  "name": "Big Bonk",
+  "description": "{value1} chance to BONK an enemy, dealing {value2} {stat1}",
+  "descriptionFr": "{value1} chance de BONK un ennemi, infligeant {value2} {stat1}",
+  "eItem": 3,
+  "eItemName": "Bonker",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/bonker.png",
+   "texture": "ItemBonker",
+   "pathId": 702
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8131
+  },
+  "nameSlug": "big-bonk"
+ },
+ {
+  "id": "Chonkplate",
+  "slug": "chonkplate",
+  "name": "Chonkplate",
+  "description": "Healing above {stat1} allows you to {stat2} by {value1}. Also gives {value2} {stat3}.",
+  "descriptionFr": "Se soigner au-dessus de {stat1} te permet de {stat2} de {value1}. Donne aussi {value2} {stat3}.",
+  "eItem": 16,
+  "eItemName": "Chonkplate",
+  "price": 10.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_chonkplate",
+  "icon": {
+   "path": "megabonk/icons/items/chonkplate.png",
+   "texture": "Chonkplate",
+   "pathId": 1298
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8132
+  },
+  "nameSlug": "chonkplate"
+ },
+ {
+  "id": "Dragonfire",
+  "slug": "dragonfire",
+  "name": "Dragonfire",
+  "description": "{value1} chance to summon dragonfire when hitting enemies. Fire damage can now apply burn.",
+  "descriptionFr": "{value1} chance d'invoquer un feu de dragon en frappant les ennemis. Les dégâts de feu peuvent maintenant brûler.",
+  "eItem": 22,
+  "eItemName": "Dragonfire",
+  "price": 10.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_dragonfire",
+  "icon": {
+   "path": "megabonk/icons/items/dragonfire.png",
+   "texture": "ItemDragonfire",
+   "pathId": 1127
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8133
+  },
+  "nameSlug": "dragonfire"
+ },
+ {
+  "id": "Energy Core",
+  "slug": "energy-core",
+  "name": "Energy Core",
+  "description": "Shoot energy orbs at enemies.",
+  "descriptionFr": "Lance des orbes d'énergie sur les ennemis.",
+  "eItem": 44,
+  "eItemName": "EnergyCore",
+  "price": 11.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_energyCore",
+  "icon": {
+   "path": "megabonk/icons/items/energy-core.png",
+   "texture": "ItemEnergyCore",
+   "pathId": 957
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8134
+  },
+  "nameSlug": "energy-core"
+ },
+ {
+  "id": "Giant Fork",
+  "slug": "giant-fork",
+  "name": "Giant Fork",
+  "description": "You can eat so much spaghetti with this bad boi. Also crits have a {value1}% chance to become Megacrits. Gain {value2} {stat2} and increase Megacrit damage by {value3}% per stack.",
+  "descriptionFr": "Avec ce bad boi, tu peux manger une quantité indécente de spaghetti. Les coups critiques ont {value1}% de chances de devenir des mégacrits. Gagne {value2} {stat2} et augmente les dégâts des mégacrits de {value3}% par cumul.",
+  "eItem": 12,
+  "eItemName": "GiantFork",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/giant-fork.png",
+   "texture": "ItemFork",
+   "pathId": 1237
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8135
+  },
+  "nameSlug": "giant-fork"
+ },
+ {
+  "id": "Gloves Power",
+  "slug": "gloves-power",
+  "name": "Power Gloves",
+  "description": "{chance} chance upon hitting an enemy to create a giant blast, damaging and knocking away enemies.",
+  "descriptionFr": "{chance} de chance à chaque coup porté sur un ennemi de déclencher une énorme explosion, infligeant des dégâts et repoussant les ennemis.",
+  "eItem": 76,
+  "eItemName": "GlovePower",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/gloves-power.png",
+   "texture": "ItemGlovesPower",
+   "pathId": 1003
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8136
+  },
+  "nameSlug": "power-gloves"
+ },
+ {
+  "id": "Golden Ring",
+  "slug": "golden-ring",
+  "name": "Golden Ring",
+  "description": "It doesn't seem to do anything...",
+  "descriptionFr": "Ça a l'air de rien faire…",
+  "eItem": 79,
+  "eItemName": "GoldenRing",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": false,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/golden-ring.png",
+   "texture": "ItemGoldenRing",
+   "pathId": 1011
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8137
+  },
+  "nameSlug": "golden-ring"
+ },
+ {
+  "id": "Holy Book",
+  "slug": "holy-book",
+  "name": "Holy Book",
+  "description": "{value1} {stat1},  {value2} {stat2}. Healing will now radiate damage to nearby enemies.",
+  "descriptionFr": "{value1} {stat1}, {value2} {stat2}. Les soins irradieront maintenant des dégâts aux ennemis proches.",
+  "eItem": 54,
+  "eItemName": "HolyBook",
+  "price": 10.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_holyBook",
+  "icon": {
+   "path": "megabonk/icons/items/holy-book.png",
+   "texture": "ItemHolyBook",
+   "pathId": 1033
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8138
+  },
+  "nameSlug": "holy-book"
+ },
+ {
+  "id": "Ice Cube",
+  "slug": "ice-cube",
+  "name": "Ice Cube",
+  "description": "{value1} chance to inflict ice damage when hitting enemies. Ice can now freeze enemies.",
+  "descriptionFr": "{value1} chance d'infliger des dégâts de glace en frappant les ennemis. La glace peut maintenant geler les ennemis.",
+  "eItem": 18,
+  "eItemName": "IceCube",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/ice-cube.png",
+   "texture": "ItemIceCube",
+   "pathId": 1097
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8139
+  },
+  "nameSlug": "ice-cube"
+ },
+ {
+  "id": "Joe's Dagger",
+  "slug": "joe-s-dagger",
+  "name": "Joe's Dagger",
+  "description": "{value1} chance to {execute} an enemy. Performing {execute} increases {stat1} by {value2}.",
+  "descriptionFr": "{value1} chance de {execute} un ennemi. Faire un {execute} augmente {stat1} de {value2}.",
+  "eItem": 49,
+  "eItemName": "JoesDagger",
+  "price": 14.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 10,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_joesDagger",
+  "icon": {
+   "path": "megabonk/icons/items/joe-s-dagger.png",
+   "texture": "JoesDagger",
+   "pathId": 823
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8140
+  },
+  "nameSlug": "joe-s-dagger"
+ },
+ {
+  "id": "Lightning Orb",
+  "slug": "lightning-orb",
+  "name": "Lightning Orb",
+  "description": "{value1} chance to summon lightning when hitting enemies. Lightning can now stun enemies.",
+  "descriptionFr": "{value1} chance d'invoquer la foudre en frappant les ennemis. La foudre peut maintenant étourdir les ennemis.",
+  "eItem": 17,
+  "eItemName": "LightningOrb",
+  "price": 10.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_lightningOrb",
+  "icon": {
+   "path": "megabonk/icons/items/lightning-orb.png",
+   "texture": "ItemLightningOrb",
+   "pathId": 1146
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8141
+  },
+  "nameSlug": "lightning-orb"
+ },
+ {
+  "id": "Overpowered Lamp",
+  "slug": "overpowered-lamp",
+  "name": "Overpowered Lamp",
+  "description": "+1 chance to proc on hit effects",
+  "descriptionFr": "+1 chance d'activer les effets à l'impact",
+  "eItem": 26,
+  "eItemName": "OverpoweredLamp",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 2,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/overpowered-lamp.png",
+   "texture": "ItemOverpoweredLamp",
+   "pathId": 890
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8142
+  },
+  "nameSlug": "overpowered-lamp"
+ },
+ {
+  "id": "PotSteel",
+  "slug": "potsteel",
+  "name": "Pot (stainless steel)",
+  "description": "More room to cook. +{value1} max levels for all weapons. Gives one less max level per stack, for a minimum of {value2} at {value3} stacks.",
+  "descriptionFr": "Plus de marge. +{value1} niveaux max pour toutes les armes. Chaque cumul donne 1 niveau max de moins, minimum {value2} à {value3} cumuls.",
+  "eItem": 84,
+  "eItemName": "Pot",
+  "price": 21.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_potSteel",
+  "icon": {
+   "path": "megabonk/icons/items/potsteel.png",
+   "texture": "ItemPot",
+   "pathId": 1110
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8143
+  },
+  "nameSlug": "pot-stainless-steel"
+ },
+ {
+  "id": "Snek",
+  "slug": "snek",
+  "name": "Snek",
+  "description": "Apply {value1} stacks of poison and get a {value2} chance to instantly burst all the poison damage when hitting an enemy.",
+  "descriptionFr": "Applique {value1} charges de poison et gagne {value2} chance de faire exploser tous les dégâts de poison instantanément en touchant un ennemi.",
+  "eItem": 83,
+  "eItemName": "Snek",
+  "price": 20.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_snek",
+  "icon": {
+   "path": "megabonk/icons/items/snek.png",
+   "texture": "ItemSnek",
+   "pathId": 1393
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8144
+  },
+  "nameSlug": "snek"
+ },
+ {
+  "id": "SoulHarvester",
+  "slug": "soulharvester",
+  "name": "Soul Harvester",
+  "description": "Killing an enemy summons {value1} homing souls",
+  "descriptionFr": "Tuer un ennemi invoque {value1} âmes qui se dirigent vers toi",
+  "eItem": 47,
+  "eItemName": "SoulHarvester",
+  "price": 13.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_soulHarvester",
+  "icon": {
+   "path": "megabonk/icons/items/soulharvester.png",
+   "texture": "ItemSoulHarvester",
+   "pathId": 1425
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8145
+  },
+  "nameSlug": "soul-harvester"
+ },
+ {
+  "id": "Speed Boi",
+  "slug": "speed-boi",
+  "name": "Speed Boi",
+  "description": "Upon taking damage below {value1} {stat1}, slow down time and deal {value2} damage.",
+  "descriptionFr": "Quand tu prends des dégâts en dessous de {value1} {stat1}, le temps ralentit et tu infliges {value2} dégâts.",
+  "eItem": 51,
+  "eItemName": "SpeedBoi",
+  "price": 10.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_speedBoi",
+  "icon": {
+   "path": "megabonk/icons/items/speed-boi.png",
+   "texture": "Speed boi",
+   "pathId": 669
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8146
+  },
+  "nameSlug": "speed-boi"
+ },
+ {
+  "id": "Spicy Meatball",
+  "slug": "spicy-meatball",
+  "name": "Spicy Meatball",
+  "description": "Attacks have a {value1} chance to explode, dealing {value2} {stat1} to surrounding enemies",
+  "descriptionFr": "Les attaques ont {value1} chance d'exploser, infligeant {value2} {stat1} aux ennemis proches",
+  "eItem": 15,
+  "eItemName": "SpicyMeatball",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/spicy-meatball.png",
+   "texture": "ItemSpicyMeatball",
+   "pathId": 817
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8147
+  },
+  "nameSlug": "spicy-meatball"
+ },
+ {
+  "id": "Sucky Magnet",
+  "slug": "sucky-magnet",
+  "name": "Sucky Magnet",
+  "description": "Periodically drag in all XP around you",
+  "descriptionFr": "Attire périodiquement toute l'XP autour de toi",
+  "eItem": 33,
+  "eItemName": "SuckyMagnet",
+  "price": 10.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_suckyMagnet",
+  "icon": {
+   "path": "megabonk/icons/items/sucky-magnet.png",
+   "texture": "ItemSuckyHoof",
+   "pathId": 1232
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8148
+  },
+  "nameSlug": "sucky-magnet"
+ },
+ {
+  "id": "WizardsHat",
+  "slug": "wizardshat",
+  "name": "Wizard's Hat",
+  "description": "Expand magical knowledge. +{value1} max levels for all tomes. Gives one less max level per stack, for a minimum of {value2} at {value3} stacks.",
+  "descriptionFr": "Développe les connaissances magiques. +{value1} niveaux max pour tous les tomes. Chaque cumul donne 1 niveau max de moins, minimum {value2} à {value3} cumuls.",
+  "eItem": 87,
+  "eItemName": "WizardsHat",
+  "price": 22.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "a_wizardsHat",
+  "icon": {
+   "path": "megabonk/icons/items/wizardshat.png",
+   "texture": "ItemWizardsHat",
+   "pathId": 1018
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8149
+  },
+  "nameSlug": "wizard-s-hat"
+ },
+ {
+  "id": "Za Warudo",
+  "slug": "za-warudo",
+  "name": "Za Warudo",
+  "description": "Upon taking damage that would kill you, freeze time. Breaks after one use.",
+  "descriptionFr": "En cas de dégâts fatals, fige le temps. Se casse après un usage.",
+  "eItem": 25,
+  "eItemName": "ZaWarudo",
+  "price": 0.0,
+  "rarity": 3,
+  "rarityName": "Legendary",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 25,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/za-warudo.png",
+   "texture": "ItemZaWarudo",
+   "pathId": 1313
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8150
+  },
+  "nameSlug": "za-warudo"
+ },
+ {
+  "id": "CageKeyMonke",
+  "slug": "cagekeymonke",
+  "name": "Golden key",
+  "description": "I wonder what it opens...",
+  "descriptionFr": "Qu'est-ce que ça peut bien ouvrir...",
+  "eItem": 69,
+  "eItemName": "CageKey",
+  "price": 0.0,
+  "rarity": 5,
+  "rarityName": "Quest",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/cagekeymonke.png",
+   "texture": "CageKey",
+   "pathId": 1369
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8151
+  },
+  "nameSlug": "golden-key"
+ },
+ {
+  "id": "CryptKey",
+  "slug": "cryptkey",
+  "name": "Crypt key",
+  "description": "I wonder what it opens...",
+  "descriptionFr": "Qu'est-ce que ça peut bien ouvrir...",
+  "eItem": 81,
+  "eItemName": "CryptKey",
+  "price": 0.0,
+  "rarity": 5,
+  "rarityName": "Quest",
+  "inItemPool": true,
+  "maxAmount": 0,
+  "maxAmountPerRun": 0,
+  "sortingPriority": 0,
+  "itemTickPriority": 0,
+  "unlock": "",
+  "icon": {
+   "path": "megabonk/icons/items/cryptkey.png",
+   "texture": "ItemCryptKey",
+   "pathId": 593
+  },
+  "source": {
+   "file": "sharedassets1.assets",
+   "pathId": 8152
+  },
+  "nameSlug": "crypt-key"
+ }
+]

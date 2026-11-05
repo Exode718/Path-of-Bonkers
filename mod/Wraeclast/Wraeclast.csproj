@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    BepInEx 6 IL2CPP plugin for Megabonk (Unity 2023.2.22f1).
+
+    Build needs two things from the game copy, both produced by the loader on
+    its first run:
+      BepInEx/interop/Assembly-CSharp.dll   (game types: DataManager, ECharacter...)
+      BepInEx/core/*.dll                    (BepInEx.Unity.IL2CPP, HarmonyX, Il2CppInterop)
+
+    Point GAME_DIR at the scratch copy, e.g.
+      dotnet build -c Release -p:GameDir=D:\Downloads\Antigravity\Idle-PoE\lab\megabonk-mod
+  -->
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <AssemblyName>Wraeclast</AssemblyName>
+    <RootNamespace>Wraeclast</RootNamespace>
+    <Version>0.1.0</Version>
+    <LangVersion>latest</LangVersion>
+    <Nullable>disable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <EnableDefaultCompileItems>true</EnableDefaultCompileItems>
+    <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DebugType>none</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(GameDir)' == ''">
+    <GameDir>$(MSBuildThisFileDirectory)..\..\lab\megabonk-mod</GameDir>
+  </PropertyGroup>
+  <PropertyGroup>
+    <InteropDir>$(GameDir)\BepInEx\interop</InteropDir>
+    <CoreDir>$(GameDir)\BepInEx\core</CoreDir>
+    <OutDir>$(GameDir)\BepInEx\plugins\Wraeclast</OutDir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="$(CoreDir)\BepInEx.Unity.IL2CPP.dll" Private="false" />
+    <Reference Include="$(CoreDir)\BepInEx.Core.dll" Private="false" />
+    <Reference Include="$(CoreDir)\0Harmony.dll" Private="false" />
+    <Reference Include="$(CoreDir)\Il2CppInterop.Runtime.dll" Private="false" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!--
+      Game types plus the Unity modules they inherit from. Il2Cppmscorlib and the
+      other Il2Cpp*.dll proxies must NOT be referenced: they redefine System.*,
+      become the compiler's corlib and break nullable annotations.
+    -->
+    <Reference Include="$(InteropDir)\Assembly-CSharp.dll" Private="false" />
+    <Reference Include="$(InteropDir)\Il2Cppmscorlib.dll" Private="false" />
+    <Reference Include="$(InteropDir)\UnityEngine*.dll" Private="false" />
+    <Reference Include="$(InteropDir)\UnityEngine.UI.dll" Private="false" Condition="Exists('$(InteropDir)\UnityEngine.UI.dll')" />
+    <Reference Include="$(InteropDir)\Unity.TextMeshPro.dll" Private="false" Condition="Exists('$(InteropDir)\Unity.TextMeshPro.dll')" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="assets\**\*" CopyToOutputDirectory="PreserveNewest" Condition="Exists('assets')" />
+  </ItemGroup>
+
+  <Target Name="CheckInterop" BeforeTargets="ResolveAssemblyReferences">
+    <Error Condition="!Exists('$(InteropDir)\Assembly-CSharp.dll')"
+           Text="Missing $(InteropDir)\Assembly-CSharp.dll — run the game once with BepInEx installed in $(GameDir), or pass -p:GameDir=&lt;path&gt;." />
+  </Target>
+
+</Project>
