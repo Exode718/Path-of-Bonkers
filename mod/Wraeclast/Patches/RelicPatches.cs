@@ -29,6 +29,7 @@ internal static class RelicPatches
     {
         EItem.Key,           // (ItemKey) on the crypt/chest path
         EItem.GoldenGlove,   // (ItemGoldenGlove) in MoneyUtility.OnEnemyDied
+        EItem.EchoShard,     // (ItemEchoShard) in PickupManager.OnEnemyDied
     };
 
     private static readonly HashSet<EItem> CastLogged = new HashSet<EItem>();
@@ -54,13 +55,15 @@ internal static class RelicPatches
         if (CastByHost.Contains(eItem))
         {
             // 0.9.106: **a slot the host downcasts keeps its donor class.** The
-            // host does `(ItemKey)item` on its key path and
-            // `(ItemGoldenGlove)item` in `MoneyUtility.OnEnemyDied` for every
-            // kill; `ItemNoImplementation` makes both throw
-            // `InvalidCastException`, and the golden-glove one aborts the whole
-            // death pipeline (no XP, no gold, an error storm in the log). The
-            // donor class stays and its **effect** is neutralised at its own
-            // hook instead (see `ItemGoldenGlovePatches`).
+            // host does `(ItemKey)item` on its key path,
+            // `(ItemGoldenGlove)item` in `MoneyUtility.OnEnemyDied` and
+            // `(ItemEchoShard)item` in `PickupManager.OnEnemyDied` for every
+            // kill; `ItemNoImplementation` makes all three throw
+            // `InvalidCastException`, and the golden-glove / echo-shard ones
+            // abort the whole death pipeline (no XP, no gold, an error storm in
+            // the log). The donor class stays and its **effect** is neutralised
+            // at its own hook instead (see `ItemGoldenGlovePatches` and
+            // `ItemEchoShardPatches`).
             if (CastLogged.Add(eItem))
             {
                 Plugin.Logger.LogInfo(
@@ -120,6 +123,30 @@ internal static class ItemGoldenGlovePatches
     private static bool BeforeGetExtraGold(ref int __result)
     {
         if (!RelicEngine.OwnsSlot(EItem.GoldenGlove))
+        {
+            return true;
+        }
+
+        __result = 0;
+        return false;
+    }
+}
+
+/// <summary>
+/// 0.9.216: the echo shard's own bonus, neutralised. The slot keeps its donor
+/// class because <c>PickupManager.OnEnemyDied</c> downcasts it on every kill
+/// (see `RelicPatches.CastByHost`), and <c>ItemNoImplementation</c> there threw
+/// 3,180 `InvalidCastException`s in one run and aborted that death's pickup
+/// pipeline. Its only effect is <c>GetExtraShards</c>, answered as zero while
+/// our relic owns the slot.
+/// </summary>
+[HarmonyPatch(typeof(ItemEchoShard), nameof(ItemEchoShard.GetExtraShards))]
+internal static class ItemEchoShardPatches
+{
+    [HarmonyPrefix]
+    private static bool BeforeGetExtraShards(ref int __result)
+    {
+        if (!RelicEngine.OwnsSlot(EItem.EchoShard))
         {
             return true;
         }

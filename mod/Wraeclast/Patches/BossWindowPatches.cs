@@ -85,6 +85,16 @@ internal static class BossWindowPatches
         return !BossWindow.BlocksFinalSwarm;
     }
 
+    /// <summary>The final arena keeps the previous stage's timeline; its boss and
+    /// the endless final swarm own the spawning there, so the floor timeline is
+    /// skipped (the summoner's own summoners still tick).</summary>
+    [HarmonyPrefix]
+    [HarmonyPatch(typeof(SummonerController), "TickTimeline")]
+    private static bool BeforeTickTimeline()
+    {
+        return !BossWindow.BlocksArenaTimeline;
+    }
+
     [HarmonyPrefix]
     [HarmonyPatch(typeof(InteractableBossSpawner), nameof(InteractableBossSpawner.Interact))]
     private static bool BeforeAltarInteract(ref bool __result)

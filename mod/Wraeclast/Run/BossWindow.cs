@@ -62,9 +62,12 @@ namespace Wraeclast.Run;
 /// then <c>MapController.LoadFinalStage</c>, the two calls
 /// <c>InteractableBossSpawnerFinal</c> makes) with no ghost wave and no
 /// countdown. On the final boss stage the arena's own <c>FinalFightController</c>
-/// spawns and runs the boss. When it dies the run does not finish: the final
-/// portal is refused and the next cycle loads stage 1 again on the same build
-/// (endless), so the native waves keep coming through our bestiary.
+/// spawns and runs the boss. When it dies the run does not finish and the floor
+/// is not reloaded: the final portal is refused and the arena turns into the
+/// game's own endless phase — <c>SummonerController.StartFinalSwarm</c> keeps
+/// spawning the final wave, whose ghost tiers (Ghost → Greater Ghost → Ghost
+/// Purple → Ghost Red) and target count escalate on <c>MyTime.finalSwarmTimer</c>
+/// exactly as in vanilla Megabonk's post-final-boss survival.
 /// </summary>
 internal static class BossWindow
 {
@@ -86,13 +89,10 @@ internal static class BossWindow
     /// teleport, and how long the teleport effect gets before the stage load.</summary>
     private const float PortalFallbackSeconds = 1.5f;
 
-    /// <summary>How long the endless loop waits after the final boss dies, so
-    /// the arena cinematic and the death dissolve finish first.</summary>
+    /// <summary>How long the arena waits after the final boss dies, so the
+    /// cinematic and the death dissolve finish before the endless ghost swarm
+    /// starts.</summary>
     private const float EndlessGraceSeconds = 3f;
-
-    /// <summary>Safety net for <c>advancing</c>: after this long without the new
-    /// stage coming up, floor logic resumes instead of staying latched.</summary>
-    private const float EndlessLoadTimeoutSeconds = 20f;
 
     /// <summary>A beat whose boss spawn failed retries at this interval, so the
     /// floor can never be left with no boss, no waves and no portal.</summary>
@@ -114,7 +114,7 @@ internal static class BossWindow
     private static bool fallbackTeleported;
     private static bool finalRequested;
     private static bool finalKilled;
-    private static bool advancing;
+    private static bool endlessStarted;
     private static bool loggedFinal;
     private static bool loggedEndless;
     private static bool loggedSuppression;
@@ -128,7 +128,6 @@ internal static class BossWindow
     private static bool finalTeleported;
     private static float nextFinalLoadAttempt;
     private static float endlessAt;
-    private static float advancingAt;
     private static int lastStage = int.MinValue;
     private static int lastShownSecond = -1;
     private static float lastStageTimer;
@@ -274,6 +273,35 @@ internal static class BossWindow
     /// endless loop owns the final boss stage.</summary>
     internal static bool BlocksFinalPortal =>
         Plugin.BossWindowEnabled.Value && Plugin.AutoNextFloor.Value && MapController.IsFinalBossStage();
+
+    /// <summary>
+    /// The final boss stage is its own scene and <c>LoadFinalStage</c> keeps the
+    /// previous stage's <c>StageData</c> (and its timeline). The arena's own
+    /// <c>FinalFightController</c> and, after the kill, the endless final swarm
+    /// own the spawning there, so the floor timeline must not also run: its
+    /// events would add floor waves beside the swarm, and a final map without a
+    /// timeline must not be dereferenced. <c>SummonerController.Tick</c> still
+    /// ticks the swarm summoner after the skipped timeline.
+    /// </summary>
+    internal static bool BlocksArenaTimeline
+    {
+        get
+        {
+            if (!Plugin.BossWindowEnabled.Value)
+            {
+                return false;
+            }
+
+            try
+            {
+                return MapController.IsFinalBossStage();
+            }
+            catch (Exception)
+            {
+                return false;
+            }
+        }
+    }
 
     /// <summary>One load-time line so a run log states the window is in force.</summary>
     internal static void Report()
@@ -473,28 +501,6 @@ internal static class BossWindow
             var finalArena = MapController.IsFinalBossStage();
             var stage = MapController.GetStageIndex();
 
-            // The endless reload is in flight: the loader keeps the old stage
-            // index until it starts, and the arena clock is still ticking, so no
-            // floor logic may run until the next cycle's first stage is live.
-            if (advancing)
-            {
-                if (!finalArena && stage == 0 && MyTime.stageTimer < 5f)
-                {
-                    advancing = false;
-                    ResetStage(0);
-                }
-                else if (MyTime.time - advancingAt > EndlessLoadTimeoutSeconds)
-                {
-                    advancing = false;
-                    Plugin.Logger.LogWarning(
-                        "boss window: the endless floor never came up, floor logic resumes");
-                }
-                else
-                {
-                    return;
-                }
-            }
-
             // The final boss stage is its own scene: it keeps the last stage
             // index, and the arena rewinds the clock on the kill, so the stage
             // reset must not touch the endless state while it is loaded.
@@ -575,6 +581,7 @@ internal static class BossWindow
         fallbackTeleported = false;
         finalRequested = false;
         finalKilled = false;
+        endlessStarted = false;
         finalTeleported = false;
         nextFinalLoadAttempt = 0f;
         endlessAt = 0f;
@@ -677,12 +684,23 @@ internal static class BossWindow
     /// <summary>
     /// The final boss stage (W2). The arena owns the fight; this only watches
     /// for the kill. The run must not finish there: the run-ending portal is
-    /// refused (<see cref="BlocksFinalPortal"/>) and, after a short grace so the
-    /// cinematic and the dissolve play, the map's first stage is loaded again on
-    /// the same build. That is the endless loop: native waves, our bestiary.
+    /// refused (<see cref="BlocksFinalPortal"/>) and the arena itself becomes
+    /// the endless phase. After a short grace so the cinematic and the dissolve
+    /// play, the game's own final swarm is started on the arena summoner
+    /// (<c>SummonerController.StartFinalSwarm</c>, the call the stage timeline
+    /// makes at its end) and never stopped: it keeps spawning ghosts and
+    /// escalates on <c>MyTime.finalSwarmTimer</c> (Ghost → Greater Ghost → Ghost
+    /// Purple → Ghost Red, with a growing target count), which is the vanilla
+    /// post-final-boss survival. Nothing is reloaded, so the run's build and
+    /// level stay.
     /// </summary>
     private static void TickFinalFight()
     {
+        if (endlessStarted)
+        {
+            return;
+        }
+
         if (endlessAt <= 0f)
         {
             if (!FinalBossDown())
@@ -704,8 +722,14 @@ internal static class BossWindow
 
             endlessAt = MyTime.time + EndlessGraceSeconds;
             HideCountdown();
-            Plugin.Logger.LogInfo(
-                $"boss window: final boss down, the run continues in {EndlessGraceSeconds:0} s (endless)");
+            if (!loggedFinal)
+            {
+                loggedFinal = true;
+                Plugin.Logger.LogInfo(
+                    $"boss window: final boss down, the endless ghost waves start in {EndlessGraceSeconds:0} s " +
+                    "(the arena stays, no floor reload)");
+            }
+
             return;
         }
 
@@ -715,43 +739,71 @@ internal static class BossWindow
         }
 
         endlessAt = 0f;
-
-        if (!loggedFinal)
-        {
-            loggedFinal = true;
-            Plugin.Logger.LogInfo("boss window: endless cycle starting, stage 1 reloads on this build");
-        }
-
-        // The arena's own transition call never lands the next stage (the
-        // operator's 0.9.142 run: the arena kept spawning waves and the player
-        // could not move). Load the first stage directly, the path the F5 floor
-        // key uses and that is validated live.
-        ResumeEndless();
+        StartEndlessSwarm();
     }
 
     /// <summary>
-    /// Loads the first stage of the current map again without the inventory
-    /// cleanup <c>StartNewMap</c> performs, so the run's build carries into the
-    /// next cycle. <c>LoadNextStage</c> reads <c>stages[index + 1]</c>, hence the
-    /// index reset; the final-boss flag must be cleared first, or the loader
-    /// would keep treating the new stage as the arena.
+    /// Starts the arena's endless phase: the game's own final swarm
+    /// (<c>StartFinalSwarm</c>) on the final stage's summoner. The swarm timer is
+    /// reset first when no swarm is running, so the escalation starts at the
+    /// base ghosts and climbs the native tiers instead of inheriting a timer
+    /// from an earlier floor. A missing summoner retries on the next tick rather
+    /// than latching an arena with no pressure.
     /// </summary>
-    private static void ResumeEndless()
+    private static void StartEndlessSwarm()
     {
+        if (StartFinalSwarm == null)
+        {
+            Plugin.Logger.LogWarning(
+                "boss window: SummonerController.StartFinalSwarm not found, the endless ghost wave cannot start");
+            return;
+        }
+
         try
         {
-            MapController.isFinalBossStage = false;
-            MapController.index = -1;
-            advancing = true;
-            advancingAt = MyTime.time;
-            MapController.LoadNextStage();
+            var manager = EnemyManager.Instance;
+            if (manager == null)
+            {
+                endlessAt = MyTime.time + 1f;
+                Plugin.Logger.LogWarning(
+                    "boss window: no EnemyManager on the final boss stage, the endless ghost wave retries");
+                return;
+            }
+
+            // `EnemyManager.FixedUpdate` only ticks the summoner while this flag
+            // is on; the arena's own goons do not go through it, so the stage may
+            // ship it off. The endless swarm is the summoner, so turn it back on.
+            if (!manager.enabledWaves)
+            {
+                manager.enabledWaves = true;
+                Plugin.Logger.LogInfo(
+                    "boss window: wave spawning was off in the arena, enabled for the endless swarm");
+            }
+
+            var summoner = manager.summonerController;
+            if (summoner == null)
+            {
+                endlessAt = MyTime.time + 1f;
+                Plugin.Logger.LogWarning(
+                    "boss window: no summoner on the final boss stage, the endless ghost wave retries");
+                return;
+            }
+
+            if (!summoner.IsFinalSwarm())
+            {
+                MyTime.finalSwarmTimer = 0f;
+            }
+
+            StartGhostWave(summoner);
+            endlessStarted = true;
             Plugin.Logger.LogInfo(
-                "boss window: endless floor requested, floor 1 of the next cycle (native waves, our bestiary)");
+                "boss window: the arena is now the endless phase — the native final swarm keeps spawning " +
+                "ghosts, harder with every tier (Ghost -> Greater Ghost -> Ghost Purple -> Ghost Red)");
         }
         catch (Exception error)
         {
-            advancing = false;
-            Plugin.Logger.LogError($"boss window: endless floor load failed: {error}");
+            endlessAt = MyTime.time + 1f;
+            Plugin.Logger.LogWarning($"boss window: the endless ghost wave failed to start: {error.Message}");
         }
     }
 

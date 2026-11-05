@@ -20,7 +20,7 @@ public sealed class Plugin : BasePlugin
 {
     public const string PluginGuid = "wraeclast.conversion";
     public const string PluginName = "Wraeclast Conversion";
-    public const string PluginVersion = "0.9.215";
+    public const string PluginVersion = "0.9.216";
 
     /// <summary>Game build this source targets (see manifest.json).</summary>
     public const string TargetGameBuild = "2023.2.22f1";
