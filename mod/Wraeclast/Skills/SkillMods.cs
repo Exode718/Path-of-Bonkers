@@ -680,6 +680,9 @@ internal static class SkillMods
     internal static float IceboundRootValue => IceboundRoot + 0.05f * Mathf.Max(0, Stacks(Icebound) - 1);
     internal static float ArcticRadiusValue => ArcticRadius + 0.05f * Mathf.Max(0, Stacks(ArcticCharge) - 1);
 
+    /// <summary>Every Nth landing cast is the charge (see <c>CastNova</c>).</summary>
+    internal static int ArcticEveryValue => ArcticEvery;
+
     internal static float CorrosiveCapValue => Mathf.Min(1.0f, CorrosiveCap + 0.02f * Mathf.Max(0, Stacks(CorrosiveBite) - 1));
     internal static float TwinFangShareValue => Mathf.Min(1.0f, TwinFangShare + 0.01f * Mathf.Max(0, Stacks(TwinFang) - 1));
     internal static float AdderBonusValue => Mathf.Min(0.60f, AdderBonus * Mathf.Max(1, Stacks(AddersGrace)));

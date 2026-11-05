@@ -20,7 +20,7 @@ public sealed class Plugin : BasePlugin
 {
     public const string PluginGuid = "wraeclast.conversion";
     public const string PluginName = "Wraeclast Conversion";
-    public const string PluginVersion = "0.9.213";
+    public const string PluginVersion = "0.9.214";
 
     /// <summary>Game build this source targets (see manifest.json).</summary>
     public const string TargetGameBuild = "2023.2.22f1";
@@ -42,6 +42,9 @@ public sealed class Plugin : BasePlugin
 
     /// <summary>V11: the burn / freeze / poison / stun badges above an enemy.</summary>
     internal static ConfigEntry<bool> EnemyStatusIcons = null!;
+
+    /// <summary>The blue ground circle that shows the skill's reach.</summary>
+    internal static ConfigEntry<bool> RangeIndicator = null!;
 
     /// <summary>SND (interim): play a host clip on each cast.</summary>
     internal static ConfigEntry<bool> SkillSounds = null!;
@@ -204,6 +207,12 @@ public sealed class Plugin : BasePlugin
             "EnemyStatusIcons",
             true,
             "V11: draw a small camera-facing badge above every enemy that is burning (orange orb), frozen (blue ring), poisoned (green orb) or stunned (yellow ring). The native debuffs exist but have no visual. The debuff check runs at 5 Hz and at most 48 enemies are badged at once; the class skill's tooltip also states its damage type.");
+
+        RangeIndicator = Config.Bind(
+            "Skills",
+            "RangeIndicator",
+            true,
+            "Draw a translucent blue circle on the floor at the class skill's effective reach: the burst/swing radius for a melee or nova, the spin radius for the Duelist's Cyclone, and the range at which a projectile, chain or ground skill locks a target. Righteous Fire's aura and the Scion's orbiting blades already draw their own area, so they get no second circle. The ring follows the player and resizes when tomes or upgrades change the radius. Also available in the game's Settings window, Other tab (Range Indicator).");
 
         SkillSounds = Config.Bind(
             "Skills",

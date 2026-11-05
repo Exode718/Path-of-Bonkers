@@ -42,6 +42,7 @@ internal static class SkillModPatches
     private static void AfterCleanup()
     {
         SkillMods.Reset();
+        RewardPool.ResetSkillCadence();
         PoeSkills.ResetModState();
         PoeSkills.ResetStorm();
     }

@@ -199,7 +199,13 @@ if (Test-Path $relicArt) {
     foreach ($file in Get-ChildItem $relicArt -Filter *.png) {
         $image = [System.Drawing.Image]::FromFile($file.FullName)
         try {
-            $scale = [Math]::Min($itemIconSize / $image.Width, $itemIconSize / $image.Height)
+            # Both operands must be doubles: Windows PowerShell resolves
+            # [Math]::Min(80, 0.26) to the Int32 overload and truncates the
+            # fit to zero, which produced a 1x1 icon for every source whose
+            # width or height divided 80 exactly (blood-thorn, void-battery).
+            $scale = [Math]::Min(
+                [double]$itemIconSize / [double]$image.Width,
+                [double]$itemIconSize / [double]$image.Height)
             $width = [Math]::Max(1, [int][Math]::Round($image.Width * $scale))
             $height = [Math]::Max(1, [int][Math]::Round($image.Height * $scale))
             $canvas = New-Object System.Drawing.Bitmap $itemIconSize, $itemIconSize

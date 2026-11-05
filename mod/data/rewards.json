@@ -2142,7 +2142,7 @@
     "slot": null,
     "skill": "ice-nova",
     "name": "Arctic Charge",
-    "text": "Every 3rd cast charges for 1 s (rooted) and bursts 40% wider.",
+    "text": "Every 3rd cast charges for 1 s, then bursts 40% wider.",
     "tier": 2,
     "rarity": "legendary",
     "weight": 50,

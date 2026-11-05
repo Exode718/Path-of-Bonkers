@@ -63,7 +63,33 @@ internal static class RewardPool
     private static int lastDraftLevel;
     private static int lastDraftStacks;
 
+    /// <summary>The character level at which the next skill palier unlocks. It
+    /// advances once per skill draft, so the cadence is counted in levels the
+    /// run actually reached: a big XP pickup — a pot, a level burst — can
+    /// neither fire a palier early (the level-up screen's own counter can run
+    /// ahead of the character level) nor fire the same palier twice.</summary>
+    private static int nextSkillLevel = 1;
+
     internal static void SetDraftLevel(int level) => draftLevel = level;
+
+    internal static void ClearDraftLevel() => draftLevel = 0;
+
+    /// <summary>Run reset: the first palier is level 1 again and no draft state
+    /// from the previous run survives.</summary>
+    internal static void ResetSkillCadence()
+    {
+        nextSkillLevel = 1;
+        LastDraftWasSkill = false;
+        draftLevel = 0;
+        lastDraftLevel = 0;
+        lastDraftStacks = 0;
+    }
+
+    /// <summary>Clears the forced-pick flag. A sanctuary or merchant screen
+    /// shuffles cards without going through <see cref="FillDraft"/>, so it must
+    /// say so or the previous level-up's skill draft would keep its refresh,
+    /// skip and banish buttons locked.</summary>
+    internal static void ClearSkillDraft() => LastDraftWasSkill = false;
 
     internal static int DraftLevel()
     {
@@ -186,7 +212,7 @@ internal static class RewardPool
             return drawn;
         }
 
-        if (IsSkillDraftLevel(level))
+        if (IsSkillDraftLevel())
         {
             // The cadence is the gate: every mod of the skill is offered from
             // the first draft, whatever its sheet tier or level floor says.
@@ -228,13 +254,26 @@ internal static class RewardPool
         return drawn;
     }
 
-    /// <summary>True when this level's draft is the skill's three upgrades.
-    /// The operator's rule (2026-11-02): level 1, then every 5 levels
+    /// <summary>True when the next draft is the class skill's three upgrades.
+    /// The operator's rule (2026-11-02): level 1, then every N levels
     /// (<c>[Skills] SkillUpgradeEvery</c>), until the skill has 40 upgrades —
-    /// any distribution across its ten mods.</summary>
-    internal static bool IsSkillDraftLevel(int level)
+    /// any distribution across its ten mods.
+    ///
+    /// The gate is the **character level** (<see cref="Level"/>), not the
+    /// level-up screen's counter: a pot's XP chunk can push that counter ahead
+    /// of the level the run is actually at, which offered a palier at level 3.
+    /// The level must also *be* a palier: a chunk that jumps from 3 straight to
+    /// 6 does not turn 6 into the level-5 draft. <see cref="nextSkillLevel"/>
+    /// then only stops a lagging screen from drafting the same palier twice.</summary>
+    internal static bool IsSkillDraftLevel()
     {
         if (!SkillMods.Active || SkillMods.TotalStacks >= SkillMods.MaxStacks)
+        {
+            return false;
+        }
+
+        var level = Level();
+        if (level < nextSkillLevel)
         {
             return false;
         }
@@ -246,6 +285,22 @@ internal static class RewardPool
 
         var every = Plugin.SkillUpgradeEvery.Value;
         return every > 0 && level % every == 0;
+    }
+
+    /// <summary>Moves the cadence past the palier just drafted. A level jump
+    /// consumes the paliers it skipped, exactly like the levels it skipped.</summary>
+    private static void AdvanceSkillCadence()
+    {
+        var level = Level();
+        var every = Plugin.SkillUpgradeEvery.Value;
+        nextSkillLevel = every <= 0 ? int.MaxValue : (level / every + 1) * every;
+        if (nextSkillLevel <= level)
+        {
+            nextSkillLevel = level + Mathf.Max(1, every);
+        }
+
+        Plugin.Logger.LogInfo(
+            $"reward pool: skill palier taken at level {level}; next at {nextSkillLevel}");
     }
 
     /// <summary>Weighted draw without replacement. Returns fewer than
@@ -706,8 +761,15 @@ internal static class RewardPool
         lastDraftStacks = stacks;
         var tier = TierForLevel(level);
         var luck = Luck();
+        var skillDraft = IsSkillDraftLevel();
         var drawn = DrawDraft(DraftCards, tier, level, luck);
-        LastDraftWasSkill = IsSkillDraftLevel(level) && drawn.Count > 0 && drawn[0].IsMod;
+        LastDraftWasSkill = skillDraft && drawn.Count > 0 && drawn[0].IsMod;
+        if (LastDraftWasSkill)
+        {
+            // The pick is forced, so the palier is spent as soon as its three
+            // cards appear: a repeated draft cannot offer the same palier twice.
+            AdvanceSkillCadence();
+        }
 
         var replacement = new List<IUpgradable>();
         var names = new List<string>();
@@ -730,7 +792,6 @@ internal static class RewardPool
         // skill draft is the exception: it shows the skill's own upgrades, and
         // only falls back when the class has none left (so the picker is never
         // empty), never padding it with a tome.
-        var skillDraft = IsSkillDraftLevel(level);
         Plugin.Logger.LogInfo(
             $"reward pool: draft level {level} (inventory {Level()}), " +
             $"{(skillDraft ? "skill upgrades" : "tomes")}, {replacement.Count} card(s)");

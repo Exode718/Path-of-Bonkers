@@ -325,6 +325,13 @@ internal static class PoeSkills
     private static float auraRadius;
     private static float auraSpin;
 
+    /// <summary>The translucent ground circle showing the skill's reach.</summary>
+    private static GameObject rangeIndicator;
+    private static SkillDefinition rangeIndicatorSkill;
+    private static float rangeIndicatorRadius = -1f;
+    private static float rangeIndicatorNext;
+    private static readonly Color RangeColour = new Color(0.36f, 0.72f, 1f, 0.42f);
+
     /// <summary>R11b item 17: Twin Orbit's spinning Starforge (two blades on a
     /// world-space holder, one per side).</summary>
     private static GameObject orbitVisual;
@@ -429,6 +436,7 @@ internal static class PoeSkills
     {
         if (!Plugin.SkillsEnabled.Value || player == null || player.inventory == null)
         {
+            DestroyRangeIndicator();
             return;
         }
 
@@ -460,7 +468,13 @@ internal static class PoeSkills
                 DisableBaseWeapons(player);
             }
 
-            if (active == null || MyTime.paused || MyTime.timeScale <= 0f || player.inventory.pause)
+            if (active == null)
+            {
+                DestroyRangeIndicator();
+                return;
+            }
+
+            if (MyTime.paused || MyTime.timeScale <= 0f || player.inventory.pause)
             {
                 return;
             }
@@ -492,6 +506,7 @@ internal static class PoeSkills
             // after the frame systems and fully exception-safe, so audio can
             // never stop the run.
             SkillAudio.Warmup(active.Id);
+            UpdateRangeIndicator(player, active, delta);
 
             cooldown -= delta;
             if (cooldown > 0f)
@@ -1206,11 +1221,15 @@ internal static class PoeSkills
         var crit = RollCrit(player);
         var damage = Damage(skill, player, crit) * plan.DamageScale;
 
-        // Arctic Charge: every 3rd cast is a rooted 1 s telegraph, then a 40%
-        // wider burst.
-        if (plan.ArcticCharge && ++arcticCasts % 3 == 0)
+        // Arctic Charge: every 3rd landing cast is a 1 s charge, then a 40%
+        // wider burst. The charge only counts casts that actually hit, so a
+        // target just outside the burst used to advance the counter every frame
+        // (a failed cast never starts the cooldown) and re-armed the burst
+        // non-stop. The charge does not root either: at the cooldowns a real
+        // build reaches, a 1 s ×0 move-speed stat was permanently zero.
+        if (plan.ArcticCharge && arcticCasts >= SkillMods.ArcticEveryValue - 1)
         {
-            SetMoving("arctic-charge", EStat.MoveSpeedMultiplier, EStatModifyType.Multiplication, 0f, 1f);
+            arcticCasts = 0;
             Echoes.Add(new Echo
             {
                 Position = position,
@@ -1245,6 +1264,11 @@ internal static class PoeSkills
             Hit(enemy, dealt, crit, skill);
             hits++;
         });
+
+        if (plan.ArcticCharge && hits > 0)
+        {
+            arcticCasts = Mathf.Min(arcticCasts + 1, SkillMods.ArcticEveryValue - 1);
+        }
 
         if (hits > 0 && plan.Echoes > 0)
         {
@@ -1739,6 +1763,110 @@ internal static class PoeSkills
         auraRadius = 0f;
         auraSpin = 0f;
         DestroyTwinOrbit();
+    }
+
+    // -------------------------------------------------------- range indicator
+
+    /// <summary>
+    /// The radius the indicator draws: a burst or a swing shows the circle its
+    /// hits are actually checked against (<c>radius + 0.6</c>, the constant the
+    /// casts use), a targeted shape shows the reach at which it locks an enemy.
+    /// </summary>
+    private static float SkillRange(MyPlayer player, SkillDefinition skill)
+    {
+        var area = Mathf.Max(1.5f, skill.Radius * RangeScale * StatScale(player, EStat.SizeMultiplier));
+        switch (skill.Shape)
+        {
+            case "melee":
+                return Mathf.Max(1.2f, area) + 0.6f;
+            case "nova":
+                return area * SkillMods.Nova(skill.Id).RadiusScale + 0.6f;
+            case "cyclone":
+            {
+                // Mirrors CastAura: Vortex Lure's one-time shrink, then the
+                // per-tick plan radius, plus the 0.4 m the spin's hit test adds.
+                var radius = area * SkillMods.CycloneRadiusScale();
+                return radius * SkillMods.Aura(skill.Id, auraBurning, stillTime).RadiusScale + 0.4f;
+            }
+            case "ground":
+                return Mathf.Max(3f, skill.Range * RangeScale);
+            case "chain":
+                return Mathf.Max(3f, skill.Range * RangeScale);
+            default:
+                return Mathf.Max(2f, skill.Range * RangeScale);
+        }
+    }
+
+    /// <summary>
+    /// Keeps the blue reach circle under the player. Righteous Fire's aura and
+    /// the Scion's orbiting blades already draw their own area, so those shapes
+    /// get no second ring; the Duelist's Cyclone does get one (the swirl alone
+    /// reads smaller than the radius the spin actually hits). The plan objects
+    /// behind the radius are rebuilt per call, so the radius is re-read at 4 Hz
+    /// while the circle follows every frame (rotating only on the slower pass,
+    /// because aligning it to the floor casts a ray).
+    /// </summary>
+    private static void UpdateRangeIndicator(MyPlayer player, SkillDefinition skill, float delta)
+    {
+        if (!Plugin.RangeIndicator.Value || player == null || skill == null ||
+            skill.Shape == "aura" || skill.Shape == "orbit")
+        {
+            DestroyRangeIndicator();
+            return;
+        }
+
+        rangeIndicatorNext -= delta;
+        if (rangeIndicator != null && rangeIndicatorSkill == skill && rangeIndicatorNext > 0f)
+        {
+            rangeIndicator.transform.position = player.GetFeetPosition() + Vector3.up * 0.03f;
+            return;
+        }
+
+        rangeIndicatorNext = 0.25f;
+        var radius = SkillRange(player, skill);
+        if (radius <= 0.05f)
+        {
+            DestroyRangeIndicator();
+            return;
+        }
+
+        var position = player.GetFeetPosition() + Vector3.up * 0.03f;
+        if (rangeIndicator == null || rangeIndicatorSkill != skill)
+        {
+            DestroyRangeIndicator();
+            rangeIndicator = SkillVisuals.Sprite(
+                "WraeclastRange",
+                SkillVisuals.RangeRing(),
+                RangeColour,
+                position,
+                AuraRotation(player, position),
+                radius * 2f);
+            rangeIndicatorSkill = skill;
+            rangeIndicatorRadius = radius;
+            Plugin.Logger.LogInfo($"{skill.Name}: range indicator {radius:0.#} m");
+            return;
+        }
+
+        rangeIndicator.transform.position = position;
+        rangeIndicator.transform.rotation = AuraRotation(player, position);
+        if (Mathf.Abs(rangeIndicatorRadius - radius) >= 0.02f)
+        {
+            rangeIndicatorRadius = radius;
+            rangeIndicator.transform.localScale = Vector3.one * radius * 2f;
+        }
+    }
+
+    private static void DestroyRangeIndicator()
+    {
+        if (rangeIndicator != null)
+        {
+            UnityEngine.Object.Destroy(rangeIndicator);
+        }
+
+        rangeIndicator = null;
+        rangeIndicatorSkill = null;
+        rangeIndicatorRadius = -1f;
+        rangeIndicatorNext = 0f;
     }
 
     /// <summary>Per-frame upkeep for the persistent effects: aura follows the
@@ -3994,6 +4122,7 @@ internal static class PoeSkills
     private static void ClearModState()
     {
         DestroyTwinOrbit();
+        DestroyRangeIndicator();
         BurnSince.Clear();
         BurningUntil.Clear();
         BurningEnemies.Clear();

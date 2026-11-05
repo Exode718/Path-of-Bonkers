@@ -20,6 +20,7 @@ internal static class SkillVisuals
 
     private static Texture2D orb;
     private static Texture2D ring;
+    private static Texture2D rangeRing;
     private static Texture2D beam;
     private static Mesh quad;
     private static Shader shader;
@@ -84,6 +85,27 @@ internal static class SkillVisuals
         }
 
         return ring;
+    }
+
+    /// <summary>The range indicator's circle. Unlike <see cref="Ring"/> — whose
+    /// band sits at 0.86 of the quad so the effect reads as a travelling
+    /// shockwave — this band hugs the quad's edge (0.985), so a quad scaled to
+    /// twice a radius draws that radius. Inside is a barely-there wash so the
+    /// circle still reads on a dark floor.</summary>
+    internal static Texture2D RangeRing()
+    {
+        if (rangeRing == null)
+        {
+            rangeRing = Build("WraeclastRangeRing", (x, y) =>
+            {
+                var d = Distance(x, y);
+                var band = Mathf.Clamp01(1f - Mathf.Abs(d - 0.985f) * 60f);
+                var fill = Mathf.Clamp01(1f - d) * 0.05f;
+                return Mathf.Clamp01(band + fill);
+            });
+        }
+
+        return rangeRing;
     }
 
     internal static Texture2D Beam()
