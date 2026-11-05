@@ -31,7 +31,7 @@ MOD = pathlib.Path(__file__).resolve().parents[2]
 ROOT = MOD.parent
 SHEET = MOD / "data/items.json"
 RELICS = MOD / "design/arena/relics.json"
-DONORS = ROOT / "docs/ITEM_DONORS.md"
+DONORS = ROOT / "lab/backup/docs/ITEM_DONORS.md"
 ENUMS = MOD / "design/megabonk/enums.json"
 REFERENCE = MOD / "design/megabonk/items.json"
 

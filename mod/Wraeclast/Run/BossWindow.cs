@@ -86,10 +86,6 @@ internal static class BossWindow
     /// teleport, and how long the teleport effect gets before the stage load.</summary>
     private const float PortalFallbackSeconds = 1.5f;
 
-    /// <summary>The FINAL_BOSS altar teleports, waits, then loads the final
-    /// stage; the same delay is used on floor 3 and for the endless reload.</summary>
-    private const float FinalTransitionSeconds = 1.5f;
-
     /// <summary>How long the endless loop waits after the final boss dies, so
     /// the arena cinematic and the death dissolve finish first.</summary>
     private const float EndlessGraceSeconds = 3f;
@@ -129,7 +125,8 @@ internal static class BossWindow
     private static float bossKilledAt;
     private static float nextPortalPoll;
     private static float nextSpawnAttempt;
-    private static float finalLoadAt;
+    private static bool finalTeleported;
+    private static float nextFinalLoadAttempt;
     private static float endlessAt;
     private static float advancingAt;
     private static int lastStage = int.MinValue;
@@ -578,7 +575,8 @@ internal static class BossWindow
         fallbackTeleported = false;
         finalRequested = false;
         finalKilled = false;
-        finalLoadAt = 0f;
+        finalTeleported = false;
+        nextFinalLoadAttempt = 0f;
         endlessAt = 0f;
         deadline = 0f;
         bossKilledAt = 0f;
@@ -596,72 +594,83 @@ internal static class BossWindow
     /// effect, then <c>MapController.LoadFinalStage()</c>, exactly the two calls
     /// <c>InteractableBossSpawnerFinal</c> makes. The arena's
     /// <c>FinalFightController</c> then spawns and drives the final boss.
+    ///
+    /// R13: the load is taken in the same frame as the teleport, like
+    /// <see cref="AdvanceFloor"/>'s no-portal fallback. Deferring it to a later
+    /// tick left the operator on floor 3 with the teleport effect and no floor
+    /// (invisible, standing still): the transition sets the cutscene flag, and
+    /// from there the player tick this class runs on (and the clock it reads) is
+    /// not something to rely on, so the deferred load was never reached and the
+    /// fade stayed up. The vanilla altar can wait because its coroutine is not on
+    /// the player's tick; ours is.
     /// </summary>
     private static void TickFinalFloor(MyPlayer player, SummonerController summoner)
     {
-        if (finalLoadAt > 0f)
-        {
-            if (MyTime.time < finalLoadAt)
-            {
-                return;
-            }
-
-            finalLoadAt = 0f;
-
-            try
-            {
-                MapController.LoadFinalStage();
-                Plugin.Logger.LogInfo("boss window: final boss stage loaded");
-            }
-            catch (Exception error)
-            {
-                Plugin.Logger.LogError($"boss window: final boss stage load failed: {error}");
-            }
-
-            return;
-        }
-
-        if (finalRequested)
-        {
-            return;
-        }
-
         var gate = GateSeconds(summoner);
         if (MyTime.stageTimer < gate)
         {
             return;
         }
 
-        finalRequested = true;
-        HideCountdown();
-        Plugin.Logger.LogInfo(
-            $"boss window: floor {lastStage + 1} has no floor boss at {MyTime.stageTimer:0.0} s, " +
-            "straight to the final boss (no ghost wave, no countdown)");
-
-        if (!Plugin.AutoNextFloor.Value)
+        if (!finalRequested)
         {
+            finalRequested = true;
+            HideCountdown();
             Plugin.Logger.LogInfo(
-                "boss window: AutoNextFloor is off, the final stage is left to the FINAL_BOSS altar");
+                $"boss window: floor {lastStage + 1} has no floor boss at {MyTime.stageTimer:0.0} s, " +
+                "straight to the final boss (no ghost wave, no countdown)");
+
+            if (!Plugin.AutoNextFloor.Value)
+            {
+                Plugin.Logger.LogInfo(
+                    "boss window: AutoNextFloor is off, the final stage is left to the FINAL_BOSS altar");
+                return;
+            }
+        }
+        else if (!Plugin.AutoNextFloor.Value)
+        {
             return;
         }
 
+        if (!finalTeleported)
+        {
+            try
+            {
+                var manager = GameManager.Instance;
+                if (manager != null)
+                {
+                    manager.cutscene = true;
+                }
+
+                player.TeleportPlayerNextStage();
+                finalTeleported = true;
+                Plugin.Logger.LogInfo("boss window: final stage transition started");
+            }
+            catch (Exception error)
+            {
+                finalRequested = false;
+                Plugin.Logger.LogWarning($"boss window: final stage transition failed: {error.Message}");
+                return;
+            }
+        }
+
+        // Real time, not the stage clock: the transition above freezes the clock
+        // this class reads, so a retry paced on it would never come around.
+        if (Time.realtimeSinceStartup < nextFinalLoadAttempt)
+        {
+            return;
+        }
+
+        nextFinalLoadAttempt = Time.realtimeSinceStartup + 1f;
+
         try
         {
-            var manager = GameManager.Instance;
-            if (manager != null)
-            {
-                manager.cutscene = true;
-            }
-
-            player.TeleportPlayerNextStage();
-            finalLoadAt = MyTime.time + FinalTransitionSeconds;
-            Plugin.Logger.LogInfo(
-                $"boss window: final stage transition started, loading in {FinalTransitionSeconds:0.0} s");
+            MapController.LoadFinalStage();
+            Plugin.Logger.LogInfo("boss window: final boss stage loaded");
         }
         catch (Exception error)
         {
-            finalRequested = false;
-            Plugin.Logger.LogWarning($"boss window: final stage transition failed: {error.Message}");
+            Plugin.Logger.LogError($"boss window: final boss stage load failed: {error}");
         }
     }
 

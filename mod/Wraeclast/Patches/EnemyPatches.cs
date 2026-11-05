@@ -177,3 +177,32 @@ internal static class EnemyCapPatches
         }
     }
 }
+
+/// <summary>
+/// The cap is per floor, not per run. The floor transition tears the previous
+/// scene down, so the enemies still on it (the last ghost wave in particular)
+/// are never released to the pool and their IDs would stay counted forever.
+/// <c>ItemInventory.Cleanup</c> only fires at a run reset, so by floor 3 the set
+/// was saturated and every regular spawn was refused while the boss tier kept
+/// spawning: no mob on floor 3 except the timeline minibosses, with
+/// <c>alive 254/250</c> from the first second. <c>LoadNextStage</c> and
+/// <c>LoadFinalStage</c> are the loaders the portal, the boss-window transition
+/// and the endless loop all take, so the reset sits on both.
+/// </summary>
+[HarmonyPatch]
+internal static class EnemyCapFloorPatches
+{
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(MapController), nameof(MapController.LoadNextStage))]
+    private static void AfterLoadNextStage()
+    {
+        EnemyCap.Reset();
+    }
+
+    [HarmonyPostfix]
+    [HarmonyPatch(typeof(MapController), nameof(MapController.LoadFinalStage))]
+    private static void AfterLoadFinalStage()
+    {
+        EnemyCap.Reset();
+    }
+}

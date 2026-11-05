@@ -38,7 +38,7 @@ IMPL_DIR = (
     / "lab/unitypy/cpp2il_isil2/IsilDump/Assembly-CSharp/Assets/Scripts"
     / "Inventory__Items__Pickups/Items/ItemImplementations"
 )
-OUT = ROOT / "docs/ITEM_DONORS.md"
+OUT = ROOT / "lab/backup/docs/ITEM_DONORS.md"
 
 # EItem members whose factory branch is shared with an earlier class (the
 # jump-table arm is a bare Goto, so no `typeof` line of its own).
